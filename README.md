@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Daniel Rodrigues — UX/UI Designer & Front-End Developer" width="100%">
+<img src="banner.svg" alt="Daniel Rodrigues — UX/UI Designer & Front-End Developer" width="100%">
 
 <br><br>
 
