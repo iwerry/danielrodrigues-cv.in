@@ -81,6 +81,8 @@ Background in design, motion graphics, 3D, animation, storytelling and journalis
 Single static `index.html`. No build step, no frameworks.
 The hero grid is a **WebGL fragment shader**; everything else is vanilla CSS and JavaScript. Hosted on GitHub Pages.
 
+<div><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Chip in for a coffee', '#72a4f2', 'N3A427FD83');kofiwidget2.draw();</script></div>div> 
+
 <div align="center">
 
 <br>
