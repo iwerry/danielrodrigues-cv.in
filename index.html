@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daniel Rodrigues — UX/UI Designer & Front-End Developer</title>
-<meta name="description" content="Portfolio: UX/UI Designer, Front-End Developer, Creative Technology.">
+<meta name="description" content="Portfolio: UX/UI Designer, Front-End Developer, Creative Technology, AI skills for film and journalism.">
 <meta property="og:title" content="Daniel Rodrigues — UX/UI Designer & Front-End">
 <meta property="og:image" content="https://github.com/iwerry.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231d21ff'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>DR</text></svg>">
@@ -97,17 +97,14 @@ h2{font:900 clamp(2.8rem,8vw,6rem)/.9 var(--d);text-transform:uppercase;margin-b
 .lang li{display:flex;justify-content:space-between;list-style:none;max-width:320px;padding:.3rem 0;border-bottom:1px dashed var(--mute)}
 .lvl{display:flex;gap:4px}.lvl i{width:22px;height:8px;background:var(--soft);border-radius:4px;transition:background .4s calc(var(--k)*90ms)}
 .rv.on .lvl i.f{background:var(--blue)}
+.cert strong{display:block;font:900 1.25rem/1.15 var(--d);text-transform:uppercase;letter-spacing:.03em;margin-bottom:.4rem}
+.cert p{max-width:52ch}
 .contact{text-align:center}
 .contact h2{font-size:clamp(3rem,13vw,11rem);color:var(--blue)}
 .contact .cta{justify-content:center}
 footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
-
-
 </style>
-
- 
-  
 </head>
 <body>
 <div id="bar"></div>
@@ -128,7 +125,6 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
   </div>
 </nav>
 
-
 <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 <script>
   kofiWidgetOverlay.draw('donatetodani', {
@@ -138,8 +134,6 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
     'floating-chat.donateButton.text-color': '#323842'
   });
 </script>
-
-  
 
 <header id="top">
   <canvas id="gl" aria-hidden="true"></canvas>
@@ -199,12 +193,13 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
         <li><span data-i="l_es"></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i style="--k:3"></i></span></li>
         <li><span data-i="l_en"></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i></span></li>
       </ul></div>
-    <div><h3 class="sub2" data-i="s_certs"></h3><p data-i="certs"></p>
+    <div class="cert"><h3 class="sub2" data-i="s_certs"></h3>
+      <strong data-i="deg"></strong>
+      <p data-i="certs"></p>
       <p><a class="go" style="text-decoration:none" href="https://drive.google.com/drive/folders/1CzAd2TRzlszizv5Tpz7VWMGog4B78gaL?usp=sharing" target="_blank" rel="noopener" data-i="certs_l"></a></p></div>
   </div>
-
-  
 </section>
+
 <section id="contact" class="contact">
   <h2 class="rv" data-i="ct_h"></h2>
   <p class="rv" data-i="ct_p" style="margin-bottom:1.5rem"></p>
@@ -212,7 +207,7 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
     <a class="btn p mag" href="mailto:draftcs21@gmail.com?subject=%5BGitHub%20Portfolio%5D%20Hello%20Daniel&body=Hi%20Daniel%2C%0A%0AI%20saw%20your%20portfolio%20on%20GitHub%20(iwerry.github.io%2Fdanielrodrigues-cv.in).%0A%0A">✉ draftcs21@gmail.com</a>
     <a class="btn mag" href="https://github.com/iwerry" target="_blank" rel="noopener" data-i="follow"></a>
     <a class="btn mag" href="https://github.com/iwerry/danielrodrigues-cv.in" target="_blank" rel="noopener" data-i="star"></a>
-    <a class="bnt mag"><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Chip in for a coffee', '#72a4f2', 'N3A427FD83');kofiwidget2.draw();</script></a>
+    <a class="btn mag"><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Chip in for a coffee', '#72a4f2', 'N3A427FD83');kofiwidget2.draw();</script></a>
   </div>
 </section>
 <footer>© 2026 Daniel Rodrigues</footer>
@@ -220,44 +215,65 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 <script>
 /* ============ CONTEÚDO (edite aqui) ============ */
 const REPOS=[
- {n:"jornalism.skill",u:"https://github.com/iwerry/jornalism.skill",k:"k_ai",d:"d_j",t:["AI","Skill","Journalism"]},
- {n:"CineOS v3.1 · DraftFilms",u:"https://github.com/iwerry/CineOS-v3.1-DraftFilms.SKILL.",k:"k_ai",d:"d_c",t:["TypeScript","JSON","Markdown"]},
- {n:"curso-fotografia-60mais-ptbr",u:"https://github.com/iwerry/curso-fotografia-60mais-ptbr",k:"k_edu",d:"d_f",t:["HTML","CSS","Education"]}
+ {n:"CineOS 3.2",u:"https://github.com/iwerry/CineOS_3.2",k:"k_ai",d:"d_c",t:["TypeScript","AI Film","Skills"]},
+ {n:"skill-master-scene",u:"https://github.com/iwerry/skill-master-scene",k:"k_ai",d:"d_m",t:["Screenwriting","YAML","JavaScript"]},
+ {n:"jornalism.skill",u:"https://github.com/iwerry/jornalism.skill",k:"k_ai",d:"d_j",t:["OSINT","Python","Journalism"]},
+ /* TODO: confirme/edite a descrição d_t (repositório não acessível publicamente na hora da edição) */
+ {n:"THEORY_ENGINE v3.0",u:"https://github.com/iwerry/THEORY_ENGINE-v3.0",k:"k_ai",d:"d_t",t:["Engine","v3.0","AI"]}
 ];
 const SITES=[
- {n:"Brasil Mostra Japão",u:"https://www.brasilmostrajapao.com.br",k:"k_web",d:"d_b",t:["HTML5","CSS3","JavaScript"]},
- {n:"Projeto Entre Elas",u:"https://www.projetoentreelas.com.br/",k:"k_web",d:"d_e",t:["HTML5","CSS3","JavaScript"]},
- {n:"Foto Cidade DF",u:"https://fotocidadedf.com.br/",k:"k_web",d:"d_p",t:["HTML5","CSS3","JavaScript"]}
+ {n:"Foto Cidade DF",u:"https://github.com/iwerry/Foto-Cidade-DF",k:"k_web",d:"d_p",t:["PHP","MySQL","Vite"]},
+ {n:"Entre Elas",u:"https://github.com/iwerry/EntreElas",k:"k_web",d:"d_e",t:["React","TypeScript","Tailwind"]},
+ {n:"BMJ 2026",u:"https://github.com/iwerry/BMJ2026",k:"k_web",d:"d_b",t:["HTML5","CSS3","JavaScript"]},
+ {n:"Curso de Fotografia 60+",u:"https://github.com/iwerry/curso-fotografia-60mais-ptbr",k:"k_edu",d:"d_f",t:["React","TypeScript","Education"]}
 ];
-const CHIPS=["Visual design","Responsive design","Figma / Penpot","UX Research","Prototyping","Design system","AI + MCP","Motion design","3D","WebGL"];
-const MARQ=["UX/UI","Front-End","React","TypeScript","Motion","WebGL","Design System","Figma","Creative Tech","AI Workflows"];
+const CHIPS=["Visual design","Responsive design","Figma / Penpot","UX Research","Prototyping","Design system","AI skills + MCP","Motion design","3D","WebGL"];
+const MARQ=["UX/UI","Front-End","React","TypeScript","Motion","WebGL","Design System","Figma","Creative Tech","AI Skills"];
 const T={
-en:{n_about:"About",n_work:"Work",n_stack:"Stack",n_path:"Path",n_contact:"Contact",role:"Front-End Developer · Creative Technology",sub:"Interfaces that move with purpose",c1:"See the work",c2:"Get in touch",hint:"Move your cursor over the grid",
-a1:"I'm a Front-End Developer and UX/UI Designer focused on modern, responsive and visually rich web interfaces.",a2:"My background spans design, motion graphics, 3D, typography, animation, storytelling, digital content and journalism. I also worked with WordPress, Drupal and legacy PHP/MySQL systems.",
-s_repos:"Repositories",s_sites:"Sites I built",k_ai:"AI · Creative workflow",k_edu:"Education",k_web:"Website",go:"Open",
-d_j:"A skill that brings journalism and investigative method into AI-assisted work.",d_c:"An audiovisual production engine: scripts, storyboards, shot lists and engine-ready prompts with real optical parameters.",d_f:"A photography course in Brazilian Portuguese made for learners aged 60 and over.",
-d_b:"Cultural website connecting Brazil and Japan.",d_e:"Institutional website for the Entre Elas project.",d_p:"Photography-focused website for Federal District, Brazil.",
+en:{n_about:"About",n_work:"Work",n_stack:"Stack",n_path:"Path",n_contact:"Contact",role:"UX/UI Designer · Front-End · Creative Technology",sub:"Interfaces and AI skills that move with purpose",c1:"See the work",c2:"Get in touch",hint:"Move your cursor over the grid",
+a1:"I'm a UX/UI Designer and Front-End Developer focused on modern, responsive and visually rich web interfaces, and on AI skills that bring professional method into creative and journalistic work.",a2:"My background spans design, motion graphics, 3D, typography, animation, storytelling, digital content and journalism. I also worked with WordPress, Drupal and legacy PHP/MySQL systems.",
+s_repos:"Skills & Engines",s_sites:"Sites & Platforms",k_ai:"AI · Skill / Engine",k_edu:"Education",k_web:"Website · Platform",go:"Open",
+d_c:"Engine-agnostic AI film production system: 62 skills, 69 Visual DNA styles with color grading, a shot-spec compiler for Veo, Kling and Seedance, continuity graph and cinema audit.",
+d_m:"Knowledge engine to format, validate, lint and convert screenplays in the Master Scene standard, ready to run as an AI agent skill.",
+d_j:"Modular AI skill for investigative journalism: OSINT, geolocation, fact-checking, data journalism, source protection and information integrity.",
+d_t:"Theory Engine v3.0, an engine project by Daniel Rodrigues.",
+d_p:"Territorial mapping, cultural production and community communication platform for Sobradinho, Fercal and Grande Colorado (DF). PHP + MySQL + Vite.",
+d_e:"Website of the Entre Elas project: free professional training for women in social vulnerability in the Federal District.",
+d_b:"Official website of Brasil Mostra Japão 2026, an event on Japanese culture, anime, manga and cosplay.",
+d_f:"Photography course website for learners aged 60 and over: 8 weeks with ebooks, video lessons and exercises, in Portuguese.",
 w1:"Responsive design · Visual hierarchy",w2:"Interface composition",w3:"Web animation · Digital experiences",d1:"Prototyping · UX research",d2:"Design systems",ct:"AI-assisted creative workflows",
 t1:"Computer assembly and configuration, then web design and CMS development (Drupal, WordPress, PHP and MySQL on GNU/Linux servers).",t2:"Audiovisual production (photography, videography, editing, motion design) and AI workflows with open-source and proprietary tools.",t3:"Bachelor's degree in Audiovisual — Filmmaking, Universidade Uninabuco Digital.",
-s_lang:"Languages",l_pt:"Portuguese · Native",l_es:"Spanish · C1",l_en:"English · B1",s_certs:"Certifications",certs:"Over 90 professional certifications in audiovisual and investigative journalism.",certs_l:"View certificates",
+s_lang:"Languages",l_pt:"Portuguese · Native",l_es:"Spanish · C1",l_en:"English · B1",s_certs:"Certifications",deg:"Bachelor's degree in Audiovisual — Filmmaking · Universidade Uninabuco Digital · 2021–2023",certs:"Over 100 certifications in audiovisual media, investigative journalism (OSINT, AFP Fact Check) and Claude Academy (Certification 101).",certs_l:"View certificates",
 ct_h:"Let's talk",ct_p:"Get in touch so we can discuss potential opportunities.",follow:"Follow on GitHub",star:"★ Star this portfolio"},
-es:{n_about:"Sobre mí",n_work:"Trabajos",n_stack:"Stack",n_path:"Trayectoria",n_contact:"Contacto",role:"Desarrollador Front-End · Tecnología Creativa",sub:"Interfaces que se mueven con propósito",c1:"Ver trabajos",c2:"Contactar",hint:"Mueve el cursor sobre la cuadrícula",
-a1:"Soy Desarrollador Front-End y Diseñador UX/UI, enfocado en interfaces web modernas, responsivas y visualmente ricas.",a2:"Mi formación abarca diseño, motion graphics, 3D, tipografía, animación, storytelling, contenido digital y periodismo. También trabajé con WordPress, Drupal y sistemas legados en PHP/MySQL.",
-s_repos:"Repositorios",s_sites:"Sitios que creé",k_ai:"IA · Flujo creativo",k_edu:"Educación",k_web:"Sitio web",go:"Abrir",
-d_j:"Una skill que lleva el periodismo y el método investigativo al trabajo asistido por IA.",d_c:"Un motor de producción audiovisual: guiones, storyboards, shot lists y prompts listos con parámetros ópticos reales.",d_f:"Un curso de fotografía en portugués brasileño pensado para personas de 60 años o más.",
-d_b:"Sitio cultural que conecta Brasil y Japón.",d_e:"Sitio institucional del proyecto Entre Elas.",d_p:"Sitio de fotografía del Distrito Federal, Brasil.",
+es:{n_about:"Sobre mí",n_work:"Trabajos",n_stack:"Stack",n_path:"Trayectoria",n_contact:"Contacto",role:"Diseñador UX/UI · Front-End · Tecnología Creativa",sub:"Interfaces y skills de IA que se mueven con propósito",c1:"Ver trabajos",c2:"Contactar",hint:"Mueve el cursor sobre la cuadrícula",
+a1:"Soy Diseñador UX/UI y Desarrollador Front-End, enfocado en interfaces web modernas, responsivas y visualmente ricas, y en skills de IA que llevan método profesional al trabajo creativo y periodístico.",a2:"Mi formación abarca diseño, motion graphics, 3D, tipografía, animación, storytelling, contenido digital y periodismo. También trabajé con WordPress, Drupal y sistemas legados en PHP/MySQL.",
+s_repos:"Skills y motores",s_sites:"Sitios y plataformas",k_ai:"IA · Skill / Motor",k_edu:"Educación",k_web:"Sitio web · Plataforma",go:"Abrir",
+d_c:"Sistema de producción cinematográfica con IA, agnóstico de motor: 62 skills, 69 estilos Visual DNA con color grading, compilador de shot-spec para Veo, Kling y Seedance, grafo de continuidad y auditoría de cine.",
+d_m:"Motor de conocimiento para formatear, validar, revisar y convertir guiones en el estándar Master Scene, listo para usarse como skill de un agente de IA.",
+d_j:"Skill modular de IA para periodismo de investigación: OSINT, geolocalización, fact-checking, periodismo de datos, protección de fuentes e integridad de la información.",
+d_t:"Theory Engine v3.0, un proyecto de motor de Daniel Rodrigues.",
+d_p:"Plataforma de mapeo territorial, producción cultural y comunicación comunitaria en Sobradinho, Fercal y Grande Colorado (DF). PHP + MySQL + Vite.",
+d_e:"Sitio del proyecto Entre Elas: capacitación profesional gratuita para mujeres en vulnerabilidad social del Distrito Federal.",
+d_b:"Sitio oficial de Brasil Mostra Japão 2026, evento de cultura japonesa, anime, manga y cosplay.",
+d_f:"Sitio del curso de fotografía para personas de 60 años o más: 8 semanas con ebooks, videoclases y ejercicios, en portugués.",
 w1:"Diseño responsivo · Jerarquía visual",w2:"Composición de interfaces",w3:"Animación web · Experiencias digitales",d1:"Prototipado · Investigación UX",d2:"Sistemas de diseño",ct:"Flujos creativos asistidos por IA",
 t1:"Montaje y configuración de computadoras; luego diseño web y desarrollo CMS (Drupal, WordPress, PHP y MySQL en servidores GNU/Linux).",t2:"Producción audiovisual (fotografía, video, edición, motion design) y flujos de IA con herramientas open source y propietarias.",t3:"Licenciatura en Audiovisual — Cine, Universidade Uninabuco Digital.",
-s_lang:"Idiomas",l_pt:"Portugués · Nativo",l_es:"Español · C1",l_en:"Inglés · B1",s_certs:"Certificaciones",certs:"Más de 90 certificaciones profesionales en audiovisual y periodismo de investigación.",certs_l:"Ver certificados",
+s_lang:"Idiomas",l_pt:"Portugués · Nativo",l_es:"Español · C1",l_en:"Inglés · B1",s_certs:"Certificaciones",deg:"Licenciatura en Audiovisual — Cine · Universidade Uninabuco Digital · 2021–2023",certs:"Más de 100 certificaciones en medios audiovisuales, periodismo de investigación (OSINT, AFP Fact Check) y Claude Academy (Certificación 101).",certs_l:"Ver certificados",
 ct_h:"Hablemos",ct_p:"Contáctame para conversar sobre posibles oportunidades.",follow:"Seguir en GitHub",star:"★ Dar estrella al portafolio"},
-pt:{n_about:"Sobre",n_work:"Trabalhos",n_stack:"Stack",n_path:"Trajetória",n_contact:"Contato",role:"Desenvolvedor Front-End · Tecnologia Criativa",sub:"Interfaces que se movem com propósito",c1:"Ver trabalhos",c2:"Entrar em contato",hint:"Mova o cursor sobre a grade",
-a1:"Sou Desenvolvedor Front-End e UX/UI Designer, focado em interfaces web modernas, responsivas e visualmente ricas.",a2:"Minha formação passa por design, motion graphics, 3D, tipografia, animação, storytelling, conteúdo digital e jornalismo. Também trabalhei com WordPress, Drupal e sistemas legados em PHP/MySQL.",
-s_repos:"Repositórios",s_sites:"Sites que criei",k_ai:"IA · Fluxo criativo",k_edu:"Educação",k_web:"Site",go:"Abrir",
-d_j:"Uma skill que leva o jornalismo e o método investigativo para o trabalho assistido por IA.",d_c:"Um motor de produção audiovisual: roteiros, storyboards, shot lists e prompts prontos com parâmetros ópticos reais.",d_f:"Um curso de fotografia em português do Brasil pensado para pessoas com 60 anos ou mais.",
-d_b:"Site cultural que conecta Brasil e Japão.",d_e:"Site institucional do Projeto Entre Elas.",d_p:"Site de fotografia do Distrito Federal.",
+pt:{n_about:"Sobre",n_work:"Trabalhos",n_stack:"Stack",n_path:"Trajetória",n_contact:"Contato",role:"UX/UI Designer · Front-End · Tecnologia Criativa",sub:"Interfaces e skills de IA que se movem com propósito",c1:"Ver trabalhos",c2:"Entrar em contato",hint:"Mova o cursor sobre a grade",
+a1:"Sou UX/UI Designer e Desenvolvedor Front-End, focado em interfaces web modernas, responsivas e visualmente ricas, e em skills de IA que levam método profissional para o trabalho criativo e jornalístico.",a2:"Minha formação passa por design, motion graphics, 3D, tipografia, animação, storytelling, conteúdo digital e jornalismo. Também trabalhei com WordPress, Drupal e sistemas legados em PHP/MySQL.",
+s_repos:"Skills e motores",s_sites:"Sites e plataformas",k_ai:"IA · Skill / Motor",k_edu:"Educação",k_web:"Site · Plataforma",go:"Abrir",
+d_c:"Sistema de produção cinematográfica com IA, agnóstico de motor: 62 skills, 69 estilos Visual DNA com color grading, compilador de shot-spec para Veo, Kling e Seedance, grafo de continuidade e auditoria de cinema.",
+d_m:"Motor de conhecimento para formatar, validar, fazer lint e converter roteiros no padrão Master Scene, pronto para uso como skill de um agente de IA.",
+d_j:"Skill modular de IA para jornalismo investigativo: OSINT, geolocalização, fact-checking, jornalismo de dados, proteção de fontes e integridade da informação.",
+d_t:"Theory Engine v3.0, um projeto de motor de Daniel Rodrigues.",
+d_p:"Plataforma de mapeamento territorial, produção cultural e comunicação comunitária em Sobradinho, Fercal e Grande Colorado (DF). PHP + MySQL + Vite.",
+d_e:"Site do Projeto Entre Elas: qualificação profissional gratuita para mulheres em situação de vulnerabilidade social no Distrito Federal.",
+d_b:"Site oficial do Brasil Mostra Japão 2026, evento de cultura japonesa, anime, mangá e cosplay.",
+d_f:"Site do curso de fotografia para pessoas com 60 anos ou mais: 8 semanas com ebooks, videoaulas e exercícios, em português.",
 w1:"Design responsivo · Hierarquia visual",w2:"Composição de interfaces",w3:"Animação web · Experiências digitais",d1:"Prototipagem · Pesquisa UX",d2:"Design systems",ct:"Fluxos criativos assistidos por IA",
 t1:"Montagem e configuração de computadores; depois web design e desenvolvimento CMS (Drupal, WordPress, PHP e MySQL em servidores GNU/Linux).",t2:"Produção audiovisual (fotografia, vídeo, edição, motion design) e fluxos de IA com ferramentas open source e proprietárias.",t3:"Bacharelado em Audiovisual — Cinema, Universidade Uninabuco Digital.",
-s_lang:"Idiomas",l_pt:"Português · Nativo",l_es:"Espanhol · C1",l_en:"Inglês · B1",s_certs:"Certificações",certs:"Mais de 90 certificações profissionais em audiovisual e jornalismo investigativo.",certs_l:"Ver certificados",
+s_lang:"Idiomas",l_pt:"Português · Nativo",l_es:"Espanhol · C1",l_en:"Inglês · B1",s_certs:"Certificações",deg:"Bacharelado em Audiovisual — Cinema · Universidade Uninabuco Digital · 2021–2023",certs:"Mais de 100 certificações em mídia audiovisual, jornalismo investigativo (OSINT, AFP Fact Check) e Claude Academy (Certificação 101).",certs_l:"Ver certificados",
 ct_h:"Vamos conversar",ct_p:"Entre em contato para conversarmos sobre oportunidades.",follow:"Seguir no GitHub",star:"★ Dar estrela no portfólio"}};
 
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
