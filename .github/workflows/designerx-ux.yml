@@ -21,6 +21,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Validate inline JavaScript syntax
+        run: |
+          node --input-type=module -e '
+            import fs from "node:fs";
+            import vm from "node:vm";
+            const html = fs.readFileSync("index.html", "utf8");
+            const scripts = [...html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/gi)];
+            if (!scripts.length) throw Error("No inline JavaScript found");
+            for (const [, code] of scripts) new vm.Script(code);
+            console.log("Inline JavaScript syntax OK");
+          '
       - name: Test original DesignerX engine
         run: node --test designerx/native/*.test.mjs
       - name: Validate portfolio context
