@@ -27,5 +27,9 @@ jobs:
         run: node designerx/native/context.mjs .
       - name: Critique portfolio structure
         run: node designerx/native/critique.mjs index.html
+      - name: Inspect motion
+        run: node designerx/native/motion.mjs index.html
+      - name: Generate independent UX handoff
+        run: node designerx/native/handoff.mjs index.html --stdout > /tmp/DESIGNERX_HANDOFF.md
       - name: Inspect portfolio HTML
         run: node designerx/native/inspect.mjs index.html --json
