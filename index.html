@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,13 +37,13 @@ nav ul a:hover{background-size:100% 2px}
 :focus-visible{outline:3px solid var(--blue);outline-offset:4px}
 ::selection{background:var(--blue);color:#fff}
 header{position:relative;min-height:100svh;display:grid;align-content:center;padding:7rem clamp(1rem,5vw,4rem) 4rem;overflow:hidden}
-#gl{position:absolute;inset:0;width:100%;height:100%;z-index:0}
-header>*:not(canvas){position:relative;z-index:1}
+ .hero-grid{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.68;background-image:repeating-linear-gradient(0deg,transparent 0 43px,color-mix(in srgb,var(--blue) 27%,transparent) 44px 45px),repeating-linear-gradient(90deg,transparent 0 43px,color-mix(in srgb,var(--blue) 27%,transparent) 44px 45px);background-size:45px 45px;mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.8) 80%,transparent);animation:gridShift 26s linear infinite} @keyframes gridShift{to{background-position:45px 45px,45px 45px}}
+header>*:not(.hero-grid){position:relative;z-index:1}
 .role{font-size:1.15rem;color:var(--mute);max-width:34ch}
 h1{font:900 clamp(3.6rem,12vw,10rem)/.82 var(--d);text-transform:uppercase;color:var(--blue);margin:1rem 0;letter-spacing:-.01em}
-h1 .l{display:inline-block;transition:transform .35s cubic-bezier(.3,1.6,.5,1);animation:drop .9s cubic-bezier(.2,.9,.2,1) both;animation-delay:calc(var(--i)*45ms)}
-h1 .l:hover{transform:translateY(-.08em) rotate(-4deg)}
-h1 .w{display:inline-block;white-space:nowrap}
+
+
+
 @keyframes drop{from{transform:translateY(110%) rotate(8deg);opacity:0}}
 .sub{font:700 clamp(1.3rem,3vw,2.2rem) var(--d);letter-spacing:.04em;text-transform:uppercase}
 .cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
@@ -61,7 +61,7 @@ h1 .w{display:inline-block;white-space:nowrap}
 @keyframes mq{to{transform:translateX(-50%)}}
 section{padding:clamp(4rem,9vw,8rem) clamp(1rem,5vw,4rem);max-width:1300px;margin:auto}
 h2{font:900 clamp(2.8rem,8vw,6rem)/.9 var(--d);text-transform:uppercase;margin-bottom:2rem}
-.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.rv{opacity:1;transform:none}
 .rv.on{opacity:1;transform:none}
 .about{display:grid;grid-template-columns:minmax(200px,320px) 1fr;gap:3rem;align-items:start}
 .ph{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;border:2px solid var(--ink);transform-style:preserve-3d;transition:transform .2s}
@@ -109,7 +109,7 @@ h2{font:900 clamp(2.8rem,8vw,6rem)/.9 var(--d);text-transform:uppercase;margin-b
 .contact h2{font-size:clamp(3rem,13vw,11rem);color:var(--blue)}
 .contact .cta{justify-content:center}
 footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.hero-grid{animation:none!important}*,*:before,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 .skip-link{position:fixed;z-index:1000;left:1rem;top:-5rem;padding:.65rem 1.2rem;background:var(--blue);color:#fff;border-radius:4px;text-decoration:none;font:700 1rem var(--d)}
 .skip-link:focus{top:1rem}
 </style>
@@ -120,11 +120,11 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 <nav>
   <a class="logo" href="#top" aria-label="Daniel Rodrigues — início"><img src="https://github.com/iwerry.png?size=128" width="46" height="46" alt="Foto de Daniel Rodrigues" decoding="async"></a>
   <ul>
-    <li><a href="#about" data-i="n_about"></a></li>
-    <li><a href="#work" data-i="n_work"></a></li>
-    <li><a href="#stack" data-i="n_stack"></a></li>
-    <li><a href="#path" data-i="n_path"></a></li>
-    <li><a href="#contact" data-i="n_contact"></a></li>
+    <li><a href="#about" data-i="n_about">About</a></li>
+    <li><a href="#work" data-i="n_work">Work</a></li>
+    <li><a href="#stack" data-i="n_stack">Stack</a></li>
+    <li><a href="#path" data-i="n_path">Path</a></li>
+    <li><a href="#contact" data-i="n_contact">Contact</a></li>
   </ul>
   <div class="tools">
     <button data-lang="en" aria-pressed="false">EN</button>
@@ -137,77 +137,84 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 
 <main id="main" tabindex="-1">
 <header id="top">
-  <canvas id="gl" aria-hidden="true"></canvas>
-  <p class="role" data-i="role"></p>
-  <h1 aria-label="UX/UI Designer" id="h1"></h1>
-  <p class="sub">Daniel Rodrigues — <span data-i="sub"></span></p>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <p class="role" data-i="role">UX/UI Designer · Front-End · Creative Technology</p>
+  <h1 id="h1">UX/UI DESIGNER</h1>
+  <p class="sub">Daniel Rodrigues — <span data-i="sub">Interfaces and AI skills that move with purpose</span></p>
   <div class="cta">
-    <a class="btn p mag" href="#work" data-i="c1"></a>
-    <a class="btn mag" href="#contact" data-i="c2"></a>
+    <a class="btn p mag" href="#work" data-i="c1">See the work</a>
+    <a class="btn mag" href="#contact" data-i="c2">Get in touch</a>
     <a class="btn mag" href="https://github.com/iwerry" target="_blank" rel="noopener">GitHub ↗</a><a class="btn mag" href="https://www.linkedin.com/in/daniel-rodrigues-693499448/" target="_blank" rel="noopener">LinkedIn ↗</a>
   </div>
-  <p class="hint"><i></i><span data-i="hint"></span></p>
+  <p class="hint"><i></i><span data-i="hint">Move your cursor over the grid</span></p>
 </header>
 
-<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+<div class="mq" aria-hidden="true"><div id="mq"><span>UX/UI</span><span>Front-End</span><span>React</span><span>TypeScript</span><span>Motion</span><span>Design Systems</span><span>Figma</span><span>Creative Tech</span><span>AI Skills</span><span>UX/UI</span><span>Front-End</span><span>React</span><span>TypeScript</span><span>Motion</span><span>Design Systems</span><span>Figma</span><span>Creative Tech</span><span>AI Skills</span></div></div>
 
 <section id="about">
-  <h2 class="rv" data-i="n_about"></h2>
+  <h2 class="rv" data-i="n_about">About</h2>
   <div class="about">
     <div class="ph rv"><img src="https://github.com/iwerry.png?size=600" alt="Daniel Rodrigues" width="480" height="600" decoding="async" loading="lazy"></div>
     <div class="rv">
-      <p data-i="a1"></p><p data-i="a2"></p>
-      <ul class="chips" id="chips"></ul>
+      <p data-i="a1">I'm a UX/UI Designer and Front-End Developer focused on modern, responsive and visually rich web interfaces, and on AI skills that bring professional method into creative and journalistic work.</p><p data-i="a2">My background spans design, motion graphics, 3D, typography, animation, storytelling, digital content and journalism. I also worked with WordPress, Drupal and legacy PHP/MySQL systems.</p>
+      <ul class="chips" id="chips"><li>Visual Design</li><li>Responsive Design</li><li>Figma / Penpot</li><li>UX Research</li><li>Prototyping</li><li>Design Systems</li><li>AI Skills + MCP</li><li>Motion Design</li><li>3D</li><li>Creative Technology</li></ul>
     </div>
   </div>
 </section>
 
 <section id="work">
-  <h2 class="rv" data-i="n_work"></h2>
-  <h3 class="sub2 rv" data-i="s_repos"></h3>
-  <div class="grid" id="repos"></div>
-  <h3 class="sub2 rv" data-i="s_sites"></h3>
-  <div class="grid" id="sites"></div>
+  <h2 class="rv" data-i="n_work">Work</h2>
+  <h3 class="sub2 rv" data-i="s_repos">Skills &amp; Engines</h3>
+  <div class="grid" id="repos"><a class="card" href="https://github.com/iwerry/designerx" target="_blank" rel="noopener noreferrer" aria-label="DesignerX: AI skill for UX/UI critique, accessibility, design systems and handoff."><span class="kind" data-i="k_ai">AI · Skill / Engine</span><h3>DesignerX</h3><p data-i="d_dx">AI skill for UX/UI critique, accessibility, design systems and handoff.</p><div class="tg"><span>UX/UI</span><span>Design Systems</span><span>AI</span></div><span class="go" data-i="go">Open</span></a>
+<a class="card" href="https://github.com/iwerry/Daniskills" target="_blank" rel="noopener noreferrer" aria-label="Daniskills 3.3: AI cinematic production system for story, shots, continuity and quality assurance; successor to CineOS."><span class="kind" data-i="k_ai">AI · Skill / Engine</span><h3>Daniskills 3.3</h3><p data-i="d_dani">AI cinematic production system for story, shots, continuity and quality assurance; successor to CineOS.</p><div class="tg"><span>Cinema</span><span>AI</span><span>Continuity</span></div><span class="go" data-i="go">Open</span></a>
+<a class="card" href="https://github.com/iwerry/code2video" target="_blank" rel="noopener noreferrer" aria-label="code2video: Code-driven motion graphics with Canvas-to-MP4 rendering and synchronized sound."><span class="kind" data-i="k_ai">AI · Skill / Engine</span><h3>code2video</h3><p data-i="d_code">Code-driven motion graphics with Canvas-to-MP4 rendering and synchronized sound.</p><div class="tg"><span>Motion</span><span>Canvas</span><span>MP4</span></div><span class="go" data-i="go">Open</span></a>
+<a class="card" href="https://github.com/iwerry/linkedin-skills-pro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile Optimizer: Skill for LinkedIn profile diagnosis, headlines, experience and skills."><span class="kind" data-i="k_ai">AI · Skill / Engine</span><h3>LinkedIn Profile Optimizer</h3><p data-i="d_link">Skill for LinkedIn profile diagnosis, headlines, experience and skills.</p><div class="tg"><span>Career</span><span>Skills</span><span>AI</span></div><span class="go" data-i="go">Open</span></a>
+<a class="card" href="https://github.com/iwerry/skill-master-scene" target="_blank" rel="noopener noreferrer" aria-label="skill-master-scene: Knowledge engine to format, validate, lint and convert screenplays in the Master Scene standard, ready to run as an AI agent skill."><span class="kind" data-i="k_ai">AI · Skill / Engine</span><h3>skill-master-scene</h3><p data-i="d_m">Knowledge engine to format, validate, lint and convert screenplays in the Master Scene standard, ready to run as an AI agent skill.</p><div class="tg"><span>Screenwriting</span><span>Validation</span></div><span class="go" data-i="go">Open</span></a></div>
+  <h3 class="sub2 rv" data-i="s_sites">Sites &amp; Platforms</h3>
+  <div class="grid" id="sites"><a class="card" href="https://brasilmostrajapao.com.br" target="_blank" rel="noopener noreferrer" aria-label="Brasil Mostra Japão: Digital experience for Brasil Mostra Japão, a Japanese cultural event."><span class="kind" data-i="k_web">Website · Platform</span><h3>Brasil Mostra Japão</h3><p data-i="d_b">Digital experience for Brasil Mostra Japão, a Japanese cultural event.</p><div class="tg"><span>Event</span><span>Web</span></div><span class="go" data-i="go">Open</span></a>
+<a class="card" href="https://www.projetoentreelas.com.br" target="_blank" rel="noopener noreferrer" aria-label="Entre Elas: Website of the Entre Elas project: free professional training for women in social vulnerability in the Federal District."><span class="kind" data-i="k_web">Website · Platform</span><h3>Entre Elas</h3><p data-i="d_e">Website of the Entre Elas project: free professional training for women in social vulnerability in the Federal District.</p><div class="tg"><span>Social Impact</span><span>UX</span></div><span class="go" data-i="go">Open</span></a>
+<a class="card" href="https://fotocidadedf.com.br" target="_blank" rel="noopener noreferrer" aria-label="Foto Cidade DF: Territorial mapping, cultural production and community communication platform for Sobradinho, Fercal and Grande Colorado (DF). PHP + MySQL + Vite."><span class="kind" data-i="k_web">Website · Platform</span><h3>Foto Cidade DF</h3><p data-i="d_p">Territorial mapping, cultural production and community communication platform for Sobradinho, Fercal and Grande Colorado (DF). PHP + MySQL + Vite.</p><div class="tg"><span>Photography</span><span>Community</span></div><span class="go" data-i="go">Open</span></a>
+<a class="card" href="https://fotografiabsb.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Photography 60+: Eight-week photography course I created and taught for learners aged 60 and over."><span class="kind" data-i="k_edu">Education</span><h3>Photography 60+</h3><p data-i="d_f">Eight-week photography course I created and taught for learners aged 60 and over.</p><div class="tg"><span>Education</span><span>React</span></div><span class="go" data-i="go">Open</span></a></div>
 </section>
 
 <section id="stack">
-  <h2 class="rv" data-i="n_stack"></h2>
+  <h2 class="rv" data-i="n_stack">Stack</h2>
   <div class="stack rv">
     <div><h3>Core</h3><ul><li>HTML5 · CSS3 (Flexbox, Grid)</li><li>JavaScript ES6+ · TypeScript</li><li>React · Next.js · Tailwind CSS</li></ul></div>
-    <div><h3>Web UI</h3><ul><li data-i="w1"></li><li data-i="w2"></li><li data-i="w3"></li></ul></div>
-    <div><h3>UX / Design</h3><ul><li>Figma · Penpot · UXPin</li><li data-i="d1"></li><li data-i="d2"></li></ul></div>
-    <div><h3>Creative Tech</h3><ul><li>Motion · 3D · VFX</li><li>WebGL · GLSL · Three.js</li><li data-i="ct"></li></ul></div>
+    <div><h3>Web UI</h3><ul><li data-i="w1">Responsive design · Visual hierarchy</li><li data-i="w2">Interface composition</li><li data-i="w3">Web animation · Digital experiences</li></ul></div>
+    <div><h3>UX / Design</h3><ul><li>Figma · Penpot · UXPin</li><li data-i="d1">Prototyping · UX research</li><li data-i="d2">Design systems</li></ul></div>
+    <div><h3>Creative Tech</h3><ul><li>Motion · 3D · VFX</li><li>WebGL · GLSL · Three.js</li><li data-i="ct">AI-assisted creative workflows</li></ul></div>
   </div>
 </section>
 
 <section id="path">
-  <h2 class="rv" data-i="n_path"></h2>
+  <h2 class="rv" data-i="n_path">Path</h2>
   <div class="tl">
-    <article class="rv"><time>2002–2015</time><p data-i="t1"></p></article>
-    <article class="rv"><time>2016–2026</time><p data-i="t2"></p></article>
-    <article class="rv"><time>2021–2023</time><p data-i="t3"></p></article>
+    <article class="rv"><time>2002–2015</time><p data-i="t1">Computer assembly and configuration, then web design and CMS development (Drupal, WordPress, PHP and MySQL on GNU/Linux servers).</p></article>
+    <article class="rv"><time>2016–2026</time><p data-i="t2">Audiovisual production (photography, videography, editing, motion design) and AI workflows with open-source and proprietary tools.</p></article>
+    <article class="rv"><time>2021–2023</time><p data-i="t3">Audiovisual &amp; Filmmaking undergraduate studies (not completed), Universidade Uninabuco Digital.</p></article>
   </div>
   <div class="ft rv">
-    <div><h3 class="sub2" data-i="s_lang"></h3>
+    <div><h3 class="sub2" data-i="s_lang">Languages</h3>
       <ul class="lang">
-        <li><span data-i="l_pt"></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i class="f" style="--k:3"></i></span></li>
-        <li><span data-i="l_es"></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i style="--k:3"></i></span></li>
-        <li><span data-i="l_en"></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i></span></li>
+        <li><span data-i="l_pt">Portuguese · Native</span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i class="f" style="--k:3"></i></span></li>
+        <li><span data-i="l_es">Spanish · C1</span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i style="--k:3"></i></span></li>
+        <li><span data-i="l_en">English · B1</span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i></span></li>
       </ul></div>
-    <div class="cert"><h3 class="sub2" data-i="s_certs"></h3>
-      <strong data-i="deg"></strong>
-      <p data-i="certs"></p>
-      <p><a class="go" style="text-decoration:none" href="https://drive.google.com/drive/folders/1CzAd2TRzlszizv5Tpz7VWMGog4B78gaL?usp=sharing" target="_blank" rel="noopener" data-i="certs_l"></a></p></div>
+    <div class="cert"><h3 class="sub2" data-i="s_certs">Certifications</h3>
+      <strong data-i="deg">Audiovisual &amp; Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023</strong>
+      <p data-i="certs">Additional training in audiovisual production, investigative journalism, fact-checking and AI.</p>
+      <p><a class="go" style="text-decoration:none" href="https://drive.google.com/drive/folders/1CzAd2TRzlszizv5Tpz7VWMGog4B78gaL?usp=sharing" target="_blank" rel="noopener" data-i="certs_l">View certificates</a></p></div>
   </div>
 </section>
 
 <section id="contact" class="contact">
-  <h2 class="rv" data-i="ct_h"></h2>
-  <p class="rv" data-i="ct_p" style="margin-bottom:1.5rem"></p>
+  <h2 class="rv" data-i="ct_h">Let's talk</h2>
+  <p class="rv" data-i="ct_p" style="margin-bottom:1.5rem">Get in touch so we can discuss potential opportunities.</p>
   <div class="cta rv">
     <a class="btn p mag" href="mailto:rodrigues.ux@proton.me?subject=%5BGitHub%20Portfolio%5D%20Hello%20Daniel&body=Hi%20Daniel%2C%0A%0AI%20saw%20your%20portfolio%20on%20GitHub%20(iwerry.github.io%2Fdanielrodrigues-cv.in).%0A%0A">✉ rodrigues.ux@proton.me</a>
-    <a class="btn mag" href="https://github.com/iwerry" target="_blank" rel="noopener" data-i="follow"></a>
-    <a class="btn mag" href="https://github.com/iwerry/danielrodrigues-cv.in" target="_blank" rel="noopener" data-i="star"></a>
+    <a class="btn mag" href="https://github.com/iwerry" target="_blank" rel="noopener" data-i="follow">Follow on GitHub</a>
+    <a class="btn mag" href="https://github.com/iwerry/danielrodrigues-cv.in" target="_blank" rel="noopener" data-i="star">★ Star this portfolio</a>
     <a class="btn mag coffee" href="https://ko-fi.com/N3A427FD83" target="_blank" rel="noopener">☕ Chip in for a coffee</a>
   </div>
 </section>
@@ -215,22 +222,7 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 <footer>© 2026 Daniel Rodrigues</footer>
 
 <script>
-/* ============ CONTEÚDO (edite aqui) ============ */
-const REPOS=[
- {n:"DesignerX",u:"https://github.com/iwerry/designerx",k:"k_ai",d:"d_dx",t:["UX/UI","Design Systems","AI"]},
- {n:"Daniskills 3.3",u:"https://github.com/iwerry/Daniskills",k:"k_ai",d:"d_dani",t:["Cinema","AI","Continuity"]},
- {n:"code2video",u:"https://github.com/iwerry/code2video",k:"k_ai",d:"d_code",t:["Motion","Canvas","MP4"]},
- {n:"LinkedIn Profile Optimizer",u:"https://github.com/iwerry/linkedin-skills-pro",k:"k_ai",d:"d_link",t:["Career","Skills","AI"]},
- {n:"skill-master-scene",u:"https://github.com/iwerry/skill-master-scene",k:"k_ai",d:"d_m",t:["Screenwriting","Validation"]}
-];
-const SITES=[
- {n:"Brasil Mostra Japão",u:"https://brasilmostrajapao.com.br",k:"k_web",d:"d_b",t:["Event","Web"]},
- {n:"Entre Elas",u:"https://www.projetoentreelas.com.br",k:"k_web",d:"d_e",t:["Social Impact","UX"]},
- {n:"Foto Cidade DF",u:"https://fotocidadedf.com.br",k:"k_web",d:"d_p",t:["Photography","Community"]},
- {n:"Photography 60+",u:"https://fotografiabsb.vercel.app",k:"k_edu",d:"d_f",t:["Education","React"]}
-];
-const CHIPS=["Visual design","Responsive design","Figma / Penpot","UX Research","Prototyping","Design system","AI skills + MCP","Motion design","3D","WebGL"];
-const MARQ=["UX/UI","Front-End","React","TypeScript","Motion","WebGL","Design System","Figma","Creative Tech","AI Skills"];
+/* Progressive enhancement: content is complete and visible without JavaScript. */
 const T={
 en:{d_dx:"AI skill for UX/UI critique, accessibility, design systems and handoff.",d_dani:"AI cinematic production system for story, shots, continuity and quality assurance; successor to CineOS.",d_code:"Code-driven motion graphics with Canvas-to-MP4 rendering and synchronized sound.",d_link:"Skill for LinkedIn profile diagnosis, headlines, experience and skills.",d_b:"Digital experience for the Brasil Mostra Japão cultural event.",d_f:"Eight-week photography course I created and taught for learners aged 60 and over.",deg:"Audiovisual & Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023",t3:"Audiovisual & Filmmaking undergraduate studies (not completed), Universidade Uninabuco Digital.",certs:"Additional training in audiovisual production, investigative journalism, fact-checking and AI.",n_about:"About",n_work:"Work",n_stack:"Stack",n_path:"Path",n_contact:"Contact",role:"UX/UI Designer · Front-End · Creative Technology",sub:"Interfaces and AI skills that move with purpose",c1:"See the work",c2:"Get in touch",hint:"Move your cursor over the grid",
 a1:"I'm a UX/UI Designer and Front-End Developer focused on modern, responsive and visually rich web interfaces, and on AI skills that bring professional method into creative and journalistic work.",a2:"My background spans design, motion graphics, 3D, typography, animation, storytelling, digital content and journalism. I also worked with WordPress, Drupal and legacy PHP/MySQL systems.",
@@ -278,63 +270,34 @@ t1:"Montagem e configuração de computadores; depois web design e desenvolvimen
 s_lang:"Idiomas",l_pt:"Português · Nativo",l_es:"Espanhol · C1",l_en:"Inglês · B1",s_certs:"Certificações",deg:"Audiovisual e Cinema — Estudos de graduação não concluídos · Universidade Uninabuco Digital · 2021–2023",certs:"Formação complementar em audiovisual, jornalismo investigativo, checagem e IA.",certs_l:"Ver certificados",
 ct_h:"Vamos conversar",ct_p:"Entre em contato para conversarmos sobre oportunidades.",follow:"Seguir no GitHub",star:"★ Dar estrela no portfólio"}};
 
-const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
-const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
-let L="pt";
-/* título animado letra a letra */
-$("#h1").innerHTML=["UX/UI","Designer"].map((w,wi)=>'<span class="w" aria-hidden="true">'+[...w].map((c,i)=>`<span class="l" style="--i:${i+wi*5}">${c}</span>`).join("")+"</span>").join(" ");
-$("#mq").innerHTML=[...MARQ,...MARQ].map(x=>`<span>${x}</span>`).join("");
-$("#chips").innerHTML=CHIPS.map(c=>`<li>${c}</li>`).join("");
-const card=p=>`<a class="card" href="${p.u}" target="_blank" rel="noopener noreferrer" aria-label="${p.n}: ${T[L]?.[p.d]||p.n}"><span class="kind" data-i="${p.k}"></span><h3>${p.n}</h3><p data-i="${p.d}"></p><div class="tg">${p.t.map(x=>`<span>${x}</span>`).join("")}</div><span class="go" data-i="go"></span></a>`;
-$("#repos").innerHTML=REPOS.map(card).join("");
-$("#sites").innerHTML=SITES.map(card).join("");
-/* idioma */
-function setLang(l){L=T[l]?l:"en";document.documentElement.lang={pt:"pt-BR",en:"en",es:"es"}[L];
- $$("[data-i]").forEach(e=>e.textContent=T[L][e.dataset.i]||"");
- $("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===L));
- $(".card").forEach((c,i)=>{const p=[...REPOS,...SITES][i];if(p)c.setAttribute("aria-label",p.n+": "+(T[L][p.d]||""))});
- try{localStorage.setItem("lang",L)}catch(e){}}
-$$("[data-lang]").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
-let s0=new URLSearchParams(location.search).get("lang");try{s0=s0||localStorage.getItem("lang")}catch(e){}
-setLang(s0||"en");
-/* tema */
-$("#th").onclick=()=>{const d=getComputedStyle(document.documentElement).getPropertyValue("--bg").trim()==="#07082b";document.documentElement.dataset.t=d?"light":"dark"};
-/* barra de progresso + reveal */
-const bar=$("#bar");addEventListener("scroll",()=>bar.style.transform=`scaleX(${scrollY/(document.body.scrollHeight-innerHeight)})`,{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.15});
-$$(".rv").forEach(e=>io.observe(e));
-/* botões magnéticos */
-if(!reduce)$$(".mag").forEach(b=>{b.onmousemove=e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`};b.onmouseleave=()=>b.style.transform=""});
-/* cards com tilt + spotlight */
-if(!reduce)$$(".card,.ph").forEach(c=>{c.onmousemove=e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
- c.style.setProperty("--ry",((x-.5)*8)+"deg");c.style.setProperty("--rx",((.5-y)*8)+"deg");c.style.setProperty("--mx",x*100+"%");c.style.setProperty("--my",y*100+"%");
- if(c.classList.contains("ph"))c.style.transform=`perspective(800px) rotateX(${(.5-y)*8}deg) rotateY(${(x-.5)*8}deg)`};
- c.onmouseleave=()=>{c.style.setProperty("--ry","0deg");c.style.setProperty("--rx","0deg");if(c.classList.contains("ph"))c.style.transform=""}});
-/* shader WebGL: grade azul que ondula com o cursor */
-(function(){const cv=$("#gl"),gl=cv.getContext("webgl");if(!gl)return;
- const vs="attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}";
- const fs=`precision mediump float;uniform vec2 r,m;uniform float t;uniform vec3 bg,fg;
- void main(){vec2 p=(gl_FragCoord.xy-.5*r)/r.y,q=(m-.5*r)/r.y;float d=length(p-q);
- p+=normalize(p-q+1e-4)*.05*exp(-d*3.5)*sin(d*22.-t*2.5);
- p+=.025*vec2(sin(p.y*5.+t*.5),cos(p.x*5.+t*.4));
- vec2 g=abs(fract(p*9.)-.5);float l=1.-smoothstep(0.,.035,min(.5-g.x,.5-g.y));
- vec2 g2=abs(fract(p*45.)-.5);float l2=1.-smoothstep(0.,.05,min(.5-g2.x,.5-g2.y));
- float glow=exp(-d*3.);vec3 c=mix(bg,fg,l*(.28+glow*.9)+l2*.06+glow*.10);gl_FragColor=vec4(c,1.);}`;
- const sh=(t,s)=>{const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o},pr=gl.createProgram();
- gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS))return;gl.useProgram(pr);
- const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
- const a=gl.getAttribLocation(pr,"p");gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
- const U=n=>gl.getUniformLocation(pr,n);let mx=0,my=0,tx=0,ty=0,vis=true,W,H;
- const hex=s=>{s=s.trim();return[1,3,5].map(i=>parseInt(s.slice(i,i+2),16)/255)};
- function size(){const dp=Math.min(devicePixelRatio,1.5);W=cv.width=cv.clientWidth*dp;H=cv.height=cv.clientHeight*dp;gl.viewport(0,0,W,H);tx=mx=W*.6;ty=my=H*.4}
- addEventListener("resize",size);size();
- addEventListener("pointermove",e=>{const r=cv.getBoundingClientRect(),dp=W/r.width;tx=(e.clientX-r.left)*dp;ty=H-(e.clientY-r.top)*dp});
- new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
- (function f(t){requestAnimationFrame(f);if(!vis)return;mx+=(tx-mx)*.08;my+=(ty-my)*.08;
-  const cs=getComputedStyle(document.documentElement);
-  gl.uniform2f(U("r"),W,H);gl.uniform2f(U("m"),mx,my);gl.uniform1f(U("t"),reduce?0:t/1000);
-  gl.uniform3fv(U("bg"),hex(cs.getPropertyValue("--bg")));gl.uniform3fv(U("fg"),hex(cs.getPropertyValue("--blue")));
-  gl.drawArrays(gl.TRIANGLES,0,3)})(0)})();
+const $$ = (selector) => [...document.querySelectorAll(selector)];
+function setLang(language) {
+  const lang = Object.prototype.hasOwnProperty.call(T, language) ? language : 'en';
+  const copy = T[lang];
+  document.documentElement.lang = {en:'en',pt:'pt-BR',es:'es'}[lang];
+  $$('[data-i]').forEach(element => {
+    const key = element.getAttribute('data-i');
+    if (Object.prototype.hasOwnProperty.call(copy,key)) element.textContent = copy[key];
+  });
+  $$('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
+  try {localStorage.setItem('lang', lang);} catch (_) {}
+}
+$$('[data-lang]').forEach(button => button.addEventListener('click',()=>setLang(button.dataset.lang)));
+let preferred = new URLSearchParams(location.search).get('lang');
+try {preferred = preferred || localStorage.getItem('lang');} catch (_) {}
+setLang(preferred || 'en');
+const themeButton = document.querySelector('#th');
+if(themeButton) themeButton.addEventListener('click', () => {
+  const root = document.documentElement;
+  const dark = getComputedStyle(root).getPropertyValue('--bg').trim()==='#07082b';
+  root.dataset.t = dark ? 'light' : 'dark';
+  themeButton.setAttribute('aria-label',dark ? 'Switch to dark theme' : 'Switch to light theme');
+});
+const bar=document.querySelector('#bar');
+if(bar) addEventListener('scroll',()=>{
+ const total=document.documentElement.scrollHeight-innerHeight;
+ bar.style.transform='scaleX('+(total>0?scrollY/total:0)+')';
+},{passive:true});
 </script>
 </body>
 </html>
