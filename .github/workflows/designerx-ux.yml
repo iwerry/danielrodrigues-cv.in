@@ -22,6 +22,10 @@ jobs:
         with:
           node-version: '22'
       - name: Test original DesignerX engine
-        run: node --test designerx/native/inspect.test.mjs
+        run: node --test designerx/native/*.test.mjs
+      - name: Validate portfolio context
+        run: node designerx/native/context.mjs .
+      - name: Critique portfolio structure
+        run: node designerx/native/critique.mjs index.html
       - name: Inspect portfolio HTML
         run: node designerx/native/inspect.mjs index.html --json
