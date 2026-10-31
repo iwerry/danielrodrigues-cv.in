@@ -21,6 +21,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verify HTML content without JavaScript
+        run: |
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const html=fs.readFileSync("index.html","utf8");
+            const staticPart=html.split("<script>")[0];
+            const required=["id=\"about\"","id=\"work\"","id=\"stack\"","id=\"path\"","id=\"contact\"","DesignerX","Daniskills","code2video","Photography 60+","rodrigues.ux@proton.me"];
+            for(const text of required) if(!staticPart.includes(text)) throw Error("Missing static content: "+text);
+            if(html.includes("getContext(\"webgl\")"))throw Error("Unexpected WebGL dependency");
+            console.log("Static content and CSS-only background verified");
+          '
       - name: Validate inline JavaScript syntax
         run: |
           node --input-type=module -e '
