@@ -52,6 +52,8 @@ jobs:
         run: node designerx/native/context.mjs .
       - name: Critique portfolio structure
         run: node designerx/native/critique.mjs index.html
+      - name: Detect layout collision risks
+        run: node designerx/native/layout-guard.mjs index.html
       - name: Inspect motion
         run: node designerx/native/motion.mjs index.html
       - name: Generate independent UX handoff
