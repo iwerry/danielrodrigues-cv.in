@@ -7,7 +7,7 @@
 <meta name="description" content="Portfolio: UX/UI Designer, Front-End Developer, Creative Technology, AI skills for film and journalism.">
 <meta property="og:title" content="Daniel Rodrigues — UX/UI Designer & Front-End">
 <meta property="og:image" content="https://raw.githubusercontent.com/iwerry/danielrodrigues-cv.in/main/banner.svg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231d21ff'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>DR</text></svg>">
+<link rel="icon" type="image/png" href="https://github.com/iwerry.png?size=128">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
@@ -23,7 +23,9 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 #bar{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--blue);transform-origin:0 50%;transform:scaleX(0);z-index:60}
 nav{position:fixed;inset:4px 0 auto;z-index:50;display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.7rem clamp(1rem,4vw,3rem);backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 75%,transparent)}
-nav .logo{font:900 1.5rem var(--d);text-decoration:none;letter-spacing:.02em}
+nav .logo{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;flex:0 0 46px;border-radius:50%;overflow:hidden;border:2px solid var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 15%,transparent);transition:transform .25s ease,box-shadow .25s ease;text-decoration:none}
+nav .logo:hover{transform:scale(1.07);box-shadow:0 0 0 5px color-mix(in srgb,var(--blue) 24%,transparent)}
+nav .logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
 nav ul{display:flex;gap:1.4rem;list-style:none;padding:0}
 nav ul a{text-decoration:none;font-size:1rem;background:linear-gradient(var(--blue),var(--blue)) 0 100%/0 2px no-repeat;transition:background-size .3s}
 nav ul a:hover{background-size:100% 2px}
@@ -110,7 +112,7 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 <body>
 <div id="bar"></div>
 <nav>
-  <a class="logo" href="#top">DR</a>
+  <a class="logo" href="#top" aria-label="Daniel Rodrigues — voltar ao início"><img src="https://github.com/iwerry.png?size=128" width="46" height="46" alt="Foto de Daniel Rodrigues" decoding="async"></a>
   <ul>
     <li><a href="#about" data-i="n_about"></a></li>
     <li><a href="#work" data-i="n_work"></a></li>
