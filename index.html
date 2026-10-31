@@ -126,6 +126,42 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
 @media(max-width:480px){header#top{padding:165px 16px 100px;min-height:720px}header#top h1{font-size:clamp(3.45rem,14vw,4.5rem)}header#top .cta{gap:9px}header#top .btn{font-size:1rem;padding:.65rem 1rem}header#top .role{margin-bottom:16px}}
 @media(prefers-reduced-motion:reduce){.hero-grid{animation:none}}
 
+
+/* DesignerX cinematic direction: performance-safe CSS-first light and motion */
+#top{background:radial-gradient(ellipse at 78% 40%,color-mix(in srgb,var(--blue) 19%,transparent),transparent 46%),var(--bg)}
+#top:before{content:"";position:absolute;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(circle at 68% 42%,color-mix(in srgb,var(--blue) 27%,transparent),transparent 33%);animation:lightDrift 13s ease-in-out infinite alternate}
+#top:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(115deg,transparent 30%,color-mix(in srgb,var(--blue) 10%,transparent) 50%,transparent 70%);background-size:220% 100%;animation:lightSweep 12s linear infinite}
+@keyframes lightDrift{to{transform:translate3d(-8%,4%,0) scale(1.12)}}
+@keyframes lightSweep{to{background-position:-220% 0}}
+#top .hero-grid{opacity:.27;transform:perspective(850px) rotateX(17deg) scale(1.15);animation:gridShift 33s linear infinite}
+#top h1{position:relative;isolation:isolate;text-shadow:0 0 30px color-mix(in srgb,var(--blue) 16%,transparent);animation:heroEnter 1.2s cubic-bezier(.16,1,.3,1) both}
+#top .role{animation:heroEnter .8s .1s both}
+#top .sub{animation:heroEnter .9s .23s both}
+#top .cta{animation:heroEnter .9s .36s both}
+@keyframes heroEnter{from{opacity:0;transform:translate3d(0,22px,0);filter:blur(6px)}to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}}
+.hero-network{position:absolute!important;inset:0;z-index:0!important;pointer-events:none;overflow:hidden;opacity:.75}
+.hero-network svg{width:100%;height:100%;display:block}
+.hero-network circle{transform-box:fill-box;transform-origin:center;animation:nodePulse var(--pulse,3.5s) ease-in-out infinite alternate;animation-delay:var(--delay,0s)}
+@keyframes nodePulse{from{opacity:.22;transform:scale(.55)}to{opacity:.95;transform:scale(1.25)}}
+.hero-network path{stroke:var(--blue);stroke-opacity:.22;stroke-width:.8}
+.hero-network .traveler{animation:travel 6s linear infinite;stroke:var(--blue);stroke-width:2;stroke-dasharray:7 100;stroke-linecap:round;stroke-opacity:.95}
+@keyframes travel{to{stroke-dashoffset:-107}}
+#top .btn{transition:transform .25s ease,background .25s ease,color .25s ease,box-shadow .25s ease}
+#top .btn:hover{transform:translateY(-3px);box-shadow:0 9px 22px -14px var(--blue)}
+.mq div{animation-duration:42s}
+.card{transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 13px 30px -17px var(--blue)}
+.tl article{animation:timelineAppear linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+@keyframes timelineAppear{from{opacity:.6;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.lang .lvl{min-width:100px;display:flex;justify-content:flex-end;align-items:center}
+.lang .lvl i{height:9px;width:20px;border:1px solid var(--mute);background:transparent;opacity:.5}
+.lang .lvl i.f{background:var(--blue);border-color:var(--blue);opacity:1}
+.lang li{gap:1rem;max-width:410px}
+.lang-label{display:block;font-size:.82rem;color:var(--mute);line-height:1.3}
+.lang-name{display:block;line-height:1.3}
+@media(max-width:680px){.hero-network{opacity:.35}#top:before{opacity:.45}#top h1{max-width:100%;overflow-wrap:anywhere}.lang .lvl{min-width:80px}.lang .lvl i{width:16px}}
+@media(prefers-reduced-motion:reduce){#top:before,#top:after,#top .hero-grid,#top h1,#top .role,#top .sub,#top .cta,.hero-network circle,.hero-network .traveler,.tl article{animation:none!important;filter:none!important}.card,#top .btn{transition:none}}
+
 </style>
 </head>
 <body>
@@ -152,6 +188,7 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
 <main id="main" tabindex="-1">
 <header id="top">
   <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-network" aria-hidden="true"><svg viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid slice"><g id="network-lines"></g><g id="network-nodes"></g></svg></div>
   <p class="role" data-i="role">UX/UI Designer · Front-End · Creative Technology</p>
   <h1 id="h1">UX/UI DESIGNER</h1>
   <p class="sub">Daniel Rodrigues — <span data-i="sub">Interfaces and AI skills that move with purpose</span></p>
@@ -211,9 +248,9 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
   <div class="ft rv">
     <div><h3 class="sub2" data-i="s_lang">Languages</h3>
       <ul class="lang">
-        <li><span data-i="l_pt">Portuguese · Native</span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i class="f" style="--k:3"></i></span></li>
-        <li><span data-i="l_es">Spanish · C1</span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i style="--k:3"></i></span></li>
-        <li><span data-i="l_en">English · B1</span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i></span></li>
+        <li><span><span class="lang-name" data-i="l_pt">Portuguese · Native</span><small class="lang-label" data-lang-level="pt">Native proficiency · C2-equivalent</small></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i class="f" style="--k:3"></i></span></li>
+        <li><span><span class="lang-name" data-i="l_es">Spanish · C1</span><small class="lang-label" data-lang-level="es">Advanced proficiency · C1</small></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i style="--k:3"></i></span></li>
+        <li><span><span class="lang-name" data-i="l_en">English · B1</span><small class="lang-label" data-lang-level="en">Intermediate proficiency · B1</small></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i></span></li>
       </ul></div>
     <div class="cert"><h3 class="sub2" data-i="s_certs">Certifications</h3>
       <strong data-i="deg">Audiovisual &amp; Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023</strong>
@@ -293,7 +330,13 @@ function setLang(language) {
     const key = element.getAttribute('data-i');
     if (Object.prototype.hasOwnProperty.call(copy,key)) element.textContent = copy[key];
   });
-  $$('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
+  $('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
+  const levels={
+    en:{pt:'Native proficiency',es:'Advanced · CEFR C1',en:'Intermediate · CEFR B1'},
+    pt:{pt:'Língua materna',es:'Avançado · QECR C1',en:'Intermediário · QECR B1'},
+    es:{pt:'Lengua materna',es:'Avanzado · MCER C1',en:'Intermedio · MCER B1'}
+  };
+  $('[data-lang-level]').forEach(node => {node.textContent=levels[lang][node.dataset.langLevel]});
   try {localStorage.setItem('lang', lang);} catch (_) {}
 }
 $$('[data-lang]').forEach(button => button.addEventListener('click',()=>setLang(button.dataset.lang)));
@@ -312,6 +355,36 @@ if(bar) addEventListener('scroll',()=>{
  const total=document.documentElement.scrollHeight-innerHeight;
  bar.style.transform='scaleX('+(total>0?scrollY/total:0)+')';
 },{passive:true});
+
+/* Lightweight deterministic SVG network: no WebGL, external runtime or request. */
+(function createNetwork(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const lines=document.querySelector('#network-lines'),nodes=document.querySelector('#network-nodes');
+  if(!lines||!nodes)return;
+  const ns='http://www.w3.org/2000/svg';
+  const points=Array.from({length:34},(_,i)=>({
+    x:520+(i%7)*76+((i*29)%47),
+    y:70+Math.floor(i/7)*108+((i*13)%43)
+  }));
+  for(let i=0;i<points.length;i++){
+    const p=points[i];
+    for(let j=i+1;j<points.length;j++){
+      const q=points[j],d=Math.hypot(p.x-q.x,p.y-q.y);
+      if(d>135||d<40)continue;
+      const path=document.createElementNS(ns,'path');
+      path.setAttribute('d','M'+p.x+' '+p.y+'L'+q.x+' '+q.y);
+      if((i+j)%11===0)path.setAttribute('class','traveler');
+      lines.appendChild(path);
+    }
+    const dot=document.createElementNS(ns,'circle');
+    dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y);dot.setAttribute('r',i%5===0?3.2:1.8);
+    dot.setAttribute('fill','var(--blue)');
+    dot.style.setProperty('--delay',(-i*.31)+'s');
+    dot.style.setProperty('--pulse',(2.3+(i%5)*.6)+'s');
+    nodes.appendChild(dot);
+  }
+})();
+
 </script>
 </body>
 </html>
