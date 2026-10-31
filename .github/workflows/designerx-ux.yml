@@ -27,7 +27,10 @@ jobs:
             import fs from "node:fs";
             import vm from "node:vm";
             const html = fs.readFileSync("index.html", "utf8");
-            const scripts = [...html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/gi)];
+            const start = html.indexOf("<script>") + 8;
+            const end = html.indexOf("</script>", start);
+            if (start < 8 || end < start) throw Error("Inline script not found");
+            const scripts = [[null, html.slice(start, end)]];
             if (!scripts.length) throw Error("No inline JavaScript found");
             for (const [, code] of scripts) new vm.Script(code);
             console.log("Inline JavaScript syntax OK");
