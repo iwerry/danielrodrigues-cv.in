@@ -1,0 +1,27 @@
+name: DesignerX Native UX Inspect
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ux-static:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio
+        uses: actions/checkout@v4
+      - name: Checkout DesignerX source
+        uses: actions/checkout@v4
+        with:
+          repository: iwerry/designerx
+          path: designerx
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test original DesignerX engine
+        run: node --test designerx/native/inspect.test.mjs
+      - name: Inspect portfolio HTML
+        run: node designerx/native/inspect.mjs index.html --json
