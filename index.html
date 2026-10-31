@@ -110,9 +110,12 @@ h2{font:900 clamp(2.8rem,8vw,6rem)/.9 var(--d);text-transform:uppercase;margin-b
 .contact .cta{justify-content:center}
 footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+.skip-link{position:fixed;z-index:1000;left:1rem;top:-5rem;padding:.65rem 1.2rem;background:var(--blue);color:#fff;border-radius:4px;text-decoration:none;font:700 1rem var(--d)}
+.skip-link:focus{top:1rem}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <div id="bar"></div>
 <nav>
   <a class="logo" href="#top" aria-label="Daniel Rodrigues — início"><img src="https://github.com/iwerry.png?size=128" width="46" height="46" alt="Foto de Daniel Rodrigues" decoding="async"></a>
@@ -132,6 +135,7 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 </nav>
 
 
+<main id="main" tabindex="-1">
 <header id="top">
   <canvas id="gl" aria-hidden="true"></canvas>
   <p class="role" data-i="role"></p>
@@ -150,7 +154,7 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
 <section id="about">
   <h2 class="rv" data-i="n_about"></h2>
   <div class="about">
-    <div class="ph rv"><img src="https://github.com/iwerry.png?size=600" alt="Daniel Rodrigues" loading="lazy"></div>
+    <div class="ph rv"><img src="https://github.com/iwerry.png?size=600" alt="Daniel Rodrigues" width="480" height="600" decoding="async" loading="lazy"></div>
     <div class="rv">
       <p data-i="a1"></p><p data-i="a2"></p>
       <ul class="chips" id="chips"></ul>
@@ -207,6 +211,7 @@ footer{padding:2rem;text-align:center;color:var(--mute);font-size:.95rem}
     <a class="btn mag coffee" href="https://ko-fi.com/N3A427FD83" target="_blank" rel="noopener">☕ Chip in for a coffee</a>
   </div>
 </section>
+</main>
 <footer>© 2026 Daniel Rodrigues</footer>
 
 <script>
