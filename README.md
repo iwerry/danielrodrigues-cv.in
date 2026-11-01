@@ -1,6 +1,6 @@
 # Daniel Rodrigues — UX/UI Designer & Front-End Developer
 
-[Live Portfolio](https://iwerry.github.io/danielrodrigues-cv.in/) · [LinkedIn](https://www.linkedin.com/in/daniel-rodrigues-693499448/) · [Email](mailto:rodrigues.ux@proton.me)
+[Live Portfolio](https://iwerry.github.io/danielrodrigues-cv.in/) · [LinkedIn](https://www.linkedin.com/in/daniel-rodrigues-ux/) · [Email](mailto:rodrigues.ux@proton.me)
 
 Multilingual (English, Portuguese and Spanish) static site using HTML, CSS, JavaScript and WebGL. Light/dark themes, interactive visuals, portfolio cards and professional background.
 
