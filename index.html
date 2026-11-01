@@ -162,6 +162,17 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
 @media(max-width:680px){.hero-network{opacity:.35}#top:before{opacity:.45}#top h1{max-width:100%;overflow-wrap:anywhere}.lang .lvl{min-width:80px}.lang .lvl i{width:16px}}
 @media(prefers-reduced-motion:reduce){#top:before,#top:after,#top .hero-grid,#top h1,#top .role,#top .sub,#top .cta,.hero-network circle,.hero-network .traveler,.tl article{animation:none!important;filter:none!important}.card,#top .btn{transition:none}}
 
+
+/* Fixed LinkedIn shortcut — uses the existing site portrait and palette */
+.linkedin-float{position:fixed;right:22px;bottom:22px;z-index:70;display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 7px;border:1px solid var(--blue);border-radius:999px;background:var(--card);color:var(--ink);box-shadow:0 10px 32px rgba(0,0,0,.28);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.linkedin-float:hover{transform:translateY(-3px);box-shadow:0 12px 32px color-mix(in srgb,var(--blue) 30%,transparent)}
+.linkedin-float .portrait{width:44px;height:44px;position:relative;flex:none}
+.linkedin-float .portrait img{width:100%;height:100%;display:block;border-radius:50%;border:2px solid var(--blue);object-fit:cover}
+.linkedin-float .linkedin-mark{position:absolute;right:-5px;bottom:-3px;width:20px;height:20px;border:2px solid var(--card);border-radius:5px;background:#0a66c2;color:#fff;display:grid;place-items:center;font:900 12px Arial,sans-serif}
+.linkedin-float .float-label{font:700 1.05rem/1 var(--d);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+@media(max-width:650px){.linkedin-float{right:14px;bottom:14px;padding:6px}.linkedin-float .float-label{display:none}.linkedin-float .portrait{width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){.linkedin-float{transition:none}.linkedin-float:hover{transform:none}}
+
 </style>
 </head>
 <body>
@@ -266,10 +277,13 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
     <a class="btn p mag" href="mailto:rodrigues.ux@proton.me?subject=%5BGitHub%20Portfolio%5D%20Hello%20Daniel&body=Hi%20Daniel%2C%0A%0AI%20saw%20your%20portfolio%20on%20GitHub%20(iwerry.github.io%2Fdanielrodrigues-cv.in).%0A%0A">✉ rodrigues.ux@proton.me</a>
     <a class="btn mag" href="https://github.com/iwerry" target="_blank" rel="noopener" data-i="follow">Follow on GitHub</a>
     <a class="btn mag" href="https://github.com/iwerry/danielrodrigues-cv.in" target="_blank" rel="noopener" data-i="star">★ Star this portfolio</a>
+    <a class="btn mag" href="https://www.linkedin.com/in/daniel-rodrigues-ux/" target="_blank" rel="noopener noreferrer" data-i="linkedin_cta">Connect on LinkedIn ↗</a>
     <a class="btn mag coffee" href="https://ko-fi.com/N3A427FD83" target="_blank" rel="noopener">☕ Chip in for a coffee</a>
   </div>
 </section>
 </main>
+<!-- Contact shortcut links to LinkedIn profile, not a direct message -->
+<a class="linkedin-float" href="https://www.linkedin.com/in/daniel-rodrigues-ux/" target="_blank" rel="noopener noreferrer" aria-label="Connect with Daniel Rodrigues on LinkedIn" title="Connect on LinkedIn"><span class="portrait"><img src="https://github.com/iwerry.png?size=128" alt="" width="46" height="46" loading="lazy" decoding="async"><span class="linkedin-mark" aria-hidden="true">in</span></span><span class="float-label" data-i="linkedin_float">Let's connect</span></a>
 <footer>© 2026 Daniel Rodrigues</footer>
 
 <script>
@@ -289,7 +303,7 @@ d_f:"Eight-week photography course I created and taught for learners aged 60 and
 w1:"Responsive design · Visual hierarchy",w2:"Interface composition",w3:"Web animation · Digital experiences",d1:"Prototyping · UX research",d2:"Design systems",ct:"AI-assisted creative workflows",
 t1:"Computer assembly and configuration, then web design and CMS development (Drupal, WordPress, PHP and MySQL on GNU/Linux servers).",t2:"Audiovisual production (photography, videography, editing, motion design) and AI workflows with open-source and proprietary tools.",t3:"Audiovisual & Filmmaking undergraduate studies (not completed), Universidade Uninabuco Digital.",
 s_lang:"Languages",l_pt:"Portuguese · Native",l_es:"Spanish · C1",l_en:"English · B1",s_certs:"Certifications",deg:"Audiovisual & Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023",certs:"Additional training in audiovisual production, investigative journalism, fact-checking and AI.",certs_l:"View certificates",
-ct_h:"Let's talk",ct_p:"Get in touch so we can discuss potential opportunities.",follow:"Follow on GitHub",star:"★ Star this portfolio"},
+ct_h:"Let's talk",ct_p:"Get in touch so we can discuss potential opportunities.",follow:"Follow on GitHub",star:"★ Star this portfolio",linkedin_cta:"Connect on LinkedIn ↗",linkedin_float:"Let\u0027s connect"},
 es:{d_dx:"Skill de IA para crítica UX/UI, accesibilidad, sistemas de diseño y handoff.",d_dani:"Sistema cinematográfico con IA, planos, continuidad y control de calidad; sucesor de CineOS.",d_code:"Motion graphics por código, render Canvas a MP4 y audio sincronizado.",d_link:"Skill para revisar perfiles de LinkedIn, titulares, experiencia y competencias.",d_b:"Experiencia digital para el evento cultural Brasil Mostra Japão.",d_f:"Curso de fotografía de ocho semanas que creé e impartí para mayores de 60 años.",deg:"Audiovisual y Cine — Estudios universitarios no finalizados · Universidade Uninabuco Digital · 2021–2023",t3:"Estudios universitarios de Audiovisual y Cine (no finalizados), Universidade Uninabuco Digital.",certs:"Formación complementaria en audiovisual, periodismo de investigación, verificación e IA.",n_about:"Sobre mí",n_work:"Trabajos",n_stack:"Stack",n_path:"Trayectoria",n_contact:"Contacto",role:"Diseñador UX/UI · Front-End · Tecnología Creativa",sub:"Interfaces y skills de IA que se mueven con propósito",c1:"Ver trabajos",c2:"Contactar",hint:"Mueve el cursor sobre la cuadrícula",
 a1:"Soy Diseñador UX/UI y Desarrollador Front-End, enfocado en interfaces web modernas, responsivas y visualmente ricas, y en skills de IA que llevan método profesional al trabajo creativo y periodístico.",a2:"Mi formación abarca diseño, motion graphics, 3D, tipografía, animación, storytelling, contenido digital y periodismo. También trabajé con WordPress, Drupal y sistemas legados en PHP/MySQL.",
 s_repos:"Skills y motores",s_sites:"Sitios y plataformas",k_ai:"IA · Skill / Motor",k_edu:"Educación",k_web:"Sitio web · Plataforma",go:"Abrir",
@@ -304,7 +318,7 @@ d_f:"Curso de fotografía de ocho semanas que creé e impartí para mayores de 6
 w1:"Diseño responsivo · Jerarquía visual",w2:"Composición de interfaces",w3:"Animación web · Experiencias digitales",d1:"Prototipado · Investigación UX",d2:"Sistemas de diseño",ct:"Flujos creativos asistidos por IA",
 t1:"Montaje y configuración de computadoras; luego diseño web y desarrollo CMS (Drupal, WordPress, PHP y MySQL en servidores GNU/Linux).",t2:"Producción audiovisual (fotografía, video, edición, motion design) y flujos de IA con herramientas open source y propietarias.",t3:"Estudios universitarios en Audiovisual y Cine (no finalizados), Universidade Uninabuco Digital.",
 s_lang:"Idiomas",l_pt:"Portugués · Nativo",l_es:"Español · C1",l_en:"Inglés · B1",s_certs:"Certificaciones",deg:"Audiovisual y Cine — Estudios universitarios no finalizados · Universidade Uninabuco Digital · 2021–2023",certs:"Formación complementaria en audiovisual, periodismo de investigación, verificación e IA.",certs_l:"Ver certificados",
-ct_h:"Hablemos",ct_p:"Contáctame para conversar sobre posibles oportunidades.",follow:"Seguir en GitHub",star:"★ Dar estrella al portafolio"},
+ct_h:"Hablemos",ct_p:"Contáctame para conversar sobre posibles oportunidades.",follow:"Seguir en GitHub",star:"★ Dar estrella al portafolio",linkedin_cta:"Conectar en LinkedIn ↗",linkedin_float:"Conectemos"},
 pt:{d_dx:"Skill de IA para crítica UX/UI, acessibilidade, sistemas de design e handoff.",d_dani:"Sistema de produção cinematográfica com IA, planos, continuidade e QA; sucessor do CineOS.",d_code:"Motion graphics por código, render Canvas para MP4 e áudio sincronizado.",d_link:"Skill para análise de perfis LinkedIn, títulos, experiências e competências.",d_b:"Experiência digital para o evento cultural Brasil Mostra Japão.",d_f:"Curso de fotografia de oito semanas que criei e ministrei para alunos com 60 anos ou mais.",deg:"Audiovisual e Cinema — Estudos de graduação não concluídos · Universidade Uninabuco Digital · 2021–2023",t3:"Estudos de graduação em Audiovisual e Cinema (não concluídos), Universidade Uninabuco Digital.",certs:"Formação complementar em audiovisual, jornalismo investigativo, checagem e IA.",n_about:"Sobre",n_work:"Trabalhos",n_stack:"Stack",n_path:"Trajetória",n_contact:"Contato",role:"UX/UI Designer · Front-End · Tecnologia Criativa",sub:"Interfaces e skills de IA que se movem com propósito",c1:"Ver trabalhos",c2:"Entrar em contato",hint:"Mova o cursor sobre a grade",
 a1:"Sou UX/UI Designer e Desenvolvedor Front-End, focado em interfaces web modernas, responsivas e visualmente ricas, e em skills de IA que levam método profissional para o trabalho criativo e jornalístico.",a2:"Minha formação passa por design, motion graphics, 3D, tipografia, animação, storytelling, conteúdo digital e jornalismo. Também trabalhei com WordPress, Drupal e sistemas legados em PHP/MySQL.",
 s_repos:"Skills e motores",s_sites:"Sites e plataformas",k_ai:"IA · Skill / Motor",k_edu:"Educação",k_web:"Site · Plataforma",go:"Abrir",
@@ -319,7 +333,7 @@ d_f:"Curso de fotografia de oito semanas que criei e ministrei para pessoas com 
 w1:"Design responsivo · Hierarquia visual",w2:"Composição de interfaces",w3:"Animação web · Experiências digitais",d1:"Prototipagem · Pesquisa UX",d2:"Design systems",ct:"Fluxos criativos assistidos por IA",
 t1:"Montagem e configuração de computadores; depois web design e desenvolvimento CMS (Drupal, WordPress, PHP e MySQL em servidores GNU/Linux).",t2:"Produção audiovisual (fotografia, vídeo, edição, motion design) e fluxos de IA com ferramentas open source e proprietárias.",t3:"Estudos de graduação em Audiovisual e Cinema (não concluídos), Universidade Uninabuco Digital.",
 s_lang:"Idiomas",l_pt:"Português · Nativo",l_es:"Espanhol · C1",l_en:"Inglês · B1",s_certs:"Certificações",deg:"Audiovisual e Cinema — Estudos de graduação não concluídos · Universidade Uninabuco Digital · 2021–2023",certs:"Formação complementar em audiovisual, jornalismo investigativo, checagem e IA.",certs_l:"Ver certificados",
-ct_h:"Vamos conversar",ct_p:"Entre em contato para conversarmos sobre oportunidades.",follow:"Seguir no GitHub",star:"★ Dar estrela no portfólio"}};
+ct_h:"Vamos conversar",ct_p:"Entre em contato para conversarmos sobre oportunidades.",follow:"Seguir no GitHub",star:"★ Dar estrela no portfólio",linkedin_cta:"Conectar no LinkedIn ↗",linkedin_float:"Vamos conectar"}};
 
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 function setLang(language) {
