@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daniel Rodrigues — UX/UI Designer & Front-End Developer</title>
-<meta name="description" content="Portfolio: UX/UI Designer, Front-End Developer, Creative Technology, AI skills for film and journalism.">
+<meta name="description" content="Daniel Rodrigues: UX/UI Designer, Front-End Developer and Creative Technologist. Responsive digital interfaces, design systems, React, TypeScript and AI-assisted workflows.">
 <meta property="og:title" content="Daniel Rodrigues — UX/UI Designer & Front-End">
 <meta property="og:image" content="https://raw.githubusercontent.com/iwerry/danielrodrigues-cv.in/main/banner.svg">
 <link rel="icon" type="image/png" href="https://github.com/iwerry.png?size=128">
@@ -12,10 +12,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef0ff;--ink:#0a0b2e;--blue:#1d21ff;--soft:#dfe2ff;--mute:#4a4d7a;--card:#f7f8ff;
+:root{--bg:#eef0ff;--ink:#0a0b2e;--blue:#1167e8;--purple:#7551dc;--yellow:#ffd166;--soft:#dfe2ff;--mute:#4a4d7a;--card:#f7f8ff;
 --d:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;--b:"Newsreader",Georgia,serif}
-@media (prefers-color-scheme:dark){:root:not([data-t=light]){--bg:#07082b;--ink:#eceeff;--blue:#6f74ff;--soft:#14174d;--mute:#a3a7dd;--card:#0d0f3d}}
-:root[data-t=dark]{--bg:#07082b;--ink:#eceeff;--blue:#6f74ff;--soft:#14174d;--mute:#a3a7dd;--card:#0d0f3d}
+@media (prefers-color-scheme:dark){:root:not([data-t=light]){--bg:#070d23;--ink:#eceeff;--blue:#74b4ff;--purple:#a991ff;--yellow:#ffd166;--soft:#14174d;--mute:#a3a7dd;--card:#0d0f3d}}
+:root[data-t=dark]{--bg:#070d23;--ink:#eceeff;--blue:#6f74ff;--soft:#14174d;--mute:#a3a7dd;--card:#0d0f3d}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{background:var(--bg);color:var(--ink);font:400 1.125rem/1.6 var(--b);overflow-x:hidden}
@@ -173,6 +173,18 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
 @media(max-width:650px){.linkedin-float{right:14px;bottom:14px;padding:6px}.linkedin-float .float-label{display:none}.linkedin-float .portrait{width:46px;height:46px}}
 @media(prefers-reduced-motion:reduce){.linkedin-float{transition:none}.linkedin-float:hover{transform:none}}
 
+
+/* CV 2026 × portfolio: violet heritage + electric blue + warm yellow */
+:root{--cv-navy:#081629;--cv-blue:#1167e8;--cv-cyan:#59deea;--cv-purple:#7551dc;--cv-yellow:#ffd166}
+#top h1{background:linear-gradient(108deg,var(--blue) 12%,var(--purple) 70%,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn.p{background:var(--blue);border-color:var(--blue);color:#fff}
+.mq{background:linear-gradient(95deg,var(--blue),var(--purple))}
+.chips li:nth-child(3n){background:color-mix(in srgb,var(--yellow) 30%,var(--soft))}
+.card:nth-child(3n):hover{box-shadow:8px 8px 0 var(--purple)}
+.go{color:var(--blue)}
+.credential{padding:.8rem 1rem;border-left:3px solid var(--yellow);background:var(--card);margin:.7rem 0}
+.credential strong{margin:0 0 .25rem}.credential span{font-size:.95rem;color:var(--mute)}
+@media(prefers-color-scheme:dark){:root:not([data-t=light]) .credential{background:var(--card)}}
 </style>
 </head>
 <body>
@@ -200,9 +212,9 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
 <header id="top">
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-network" aria-hidden="true"><svg viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid slice"><g id="network-lines"></g><g id="network-nodes"></g></svg></div>
-  <p class="role" data-i="role">UX/UI Designer · Front-End · Creative Technology</p>
+  <p class="role" data-i="role">UX/UI Designer · Front-End Developer · Creative Technologist</p>
   <h1 id="h1">UX/UI DESIGNER</h1>
-  <p class="sub">Daniel Rodrigues — <span data-i="sub">Interfaces and AI skills that move with purpose</span></p>
+  <p class="sub">Daniel Rodrigues — <span data-i="sub">Digital interfaces designed with intention, built with code, and extended through creative AI.</span></p>
   <div class="cta">
     <a class="btn p mag" href="#work" data-i="c1">See the work</a>
     <a class="btn mag" href="#contact" data-i="c2">Get in touch</a>
@@ -218,7 +230,7 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
   <div class="about">
     <div class="ph rv"><img src="https://github.com/iwerry.png?size=600" alt="Daniel Rodrigues" width="480" height="600" decoding="async" loading="lazy"></div>
     <div class="rv">
-      <p data-i="a1">I'm a UX/UI Designer and Front-End Developer focused on modern, responsive and visually rich web interfaces, and on AI skills that bring professional method into creative and journalistic work.</p><p data-i="a2">My background spans design, motion graphics, 3D, typography, animation, storytelling, digital content and journalism. I also worked with WordPress, Drupal and legacy PHP/MySQL systems.</p>
+      <p data-i="a1">I design responsive web experiences and digital interfaces, connecting UX/UI, visual systems and front-end implementation with React, TypeScript, JavaScript, HTML and CSS.</p><p data-i="a2">At Draft Creative Studio (2016–present), I work across web design, digital interfaces and multidisciplinary creative production. Audiovisual storytelling, motion and AI workflows with Claude and Higgsfield complement my design and development practice.</p>
       <ul class="chips" id="chips"><li>Visual Design</li><li>Responsive Design</li><li>Figma / Penpot</li><li>UX Research</li><li>Prototyping</li><li>Design Systems</li><li>AI Skills + MCP</li><li>Motion Design</li><li>3D</li><li>Creative Technology</li></ul>
     </div>
   </div>
@@ -253,7 +265,7 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
   <h2 class="rv" data-i="n_path">Path</h2>
   <div class="tl">
     <article class="rv"><time>2002–2015</time><p data-i="t1">Computer assembly and configuration, then web design and CMS development (Drupal, WordPress, PHP and MySQL on GNU/Linux servers).</p></article>
-    <article class="rv"><time>2016–2026</time><p data-i="t2">Audiovisual production (photography, videography, editing, motion design) and AI workflows with open-source and proprietary tools.</p></article>
+    <article class="rv"><time>2016–Present</time><p data-i="t2">Draft Creative Studio — UX/UI design, responsive websites, front-end development and multidisciplinary creative production across motion, audiovisual and AI.</p></article>
     <article class="rv"><time>2021–2023</time><p data-i="t3">Audiovisual &amp; Filmmaking undergraduate studies (not completed), Universidade Uninabuco Digital.</p></article>
   </div>
   <div class="ft rv">
@@ -263,7 +275,7 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
         <li><span><span class="lang-name" data-i="l_es">Spanish · C1</span><small class="lang-label" data-lang-level="es">Advanced proficiency · C1</small></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i class="f" style="--k:2"></i><i style="--k:3"></i></span></li>
         <li><span><span class="lang-name" data-i="l_en">English · B1</span><small class="lang-label" data-lang-level="en">Intermediate proficiency · B1</small></span><span class="lvl"><i class="f" style="--k:0"></i><i class="f" style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i></span></li>
       </ul></div>
-    <div class="cert"><h3 class="sub2" data-i="s_certs">Certifications</h3>
+    <div class="cert"><h3 class="sub2" data-i="s_certs">Credentials & Education</h3><p class="credential"><strong data-i="registered">Registered Journalist</strong><span>Brazil · DRT Nº 0016639/DF</span></p><p class="credential"><strong data-i="ai_cert">AI certification · in progress</strong><span>Claude Academy (Anthropic) · OpenAI Academy</span></p>
       <strong data-i="deg">Audiovisual &amp; Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023</strong>
       <p data-i="certs">Additional training in audiovisual production, investigative journalism, fact-checking and AI.</p>
       <p><a class="go" style="text-decoration:none" href="https://drive.google.com/drive/folders/1CzAd2TRzlszizv5Tpz7VWMGog4B78gaL?usp=sharing" target="_blank" rel="noopener" data-i="certs_l">View certificates</a></p></div>
@@ -274,7 +286,7 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
   <h2 class="rv" data-i="ct_h">Let's talk</h2>
   <p class="rv" data-i="ct_p" style="margin-bottom:1.5rem">Get in touch so we can discuss potential opportunities.</p>
   <div class="cta rv">
-    <a class="btn p mag" href="mailto:rodrigues.ux@proton.me?subject=%5BGitHub%20Portfolio%5D%20Hello%20Daniel&body=Hi%20Daniel%2C%0A%0AI%20saw%20your%20portfolio%20on%20GitHub%20(iwerry.github.io%2Fdanielrodrigues-cv.in).%0A%0A">✉ rodrigues.ux@proton.me</a>
+    <a class="btn p mag" href="mailto:draftcs21@gmail.com?subject=%5BGitHub%20Portfolio%5D%20Hello%20Daniel&body=Hi%20Daniel%2C%0A%0AI%20saw%20your%20portfolio%20on%20GitHub%20(iwerry.github.io%2Fdanielrodrigues-cv.in).%0A%0A">✉ draftcs21@gmail.com</a>
     <a class="btn mag" href="https://github.com/iwerry" target="_blank" rel="noopener" data-i="follow">Follow on GitHub</a>
     <a class="btn mag" href="https://github.com/iwerry/danielrodrigues-cv.in" target="_blank" rel="noopener" data-i="star">★ Star this portfolio</a>
     <a class="btn mag" href="https://www.linkedin.com/in/daniel-rodrigues-ux/" target="_blank" rel="noopener noreferrer" data-i="linkedin_cta">Connect on LinkedIn ↗</a>
@@ -289,8 +301,8 @@ header#top .hint{right:clamp(20px,5vw,64px);bottom:26px;left:auto;max-width:270p
 <script>
 /* Progressive enhancement: content is complete and visible without JavaScript. */
 const T={
-en:{d_dx:"AI skill for UX/UI critique, accessibility, design systems and handoff.",d_dani:"AI cinematic production system for story, shots, continuity and quality assurance; successor to CineOS.",d_code:"Code-driven motion graphics with Canvas-to-MP4 rendering and synchronized sound.",d_link:"Skill for LinkedIn profile diagnosis, headlines, experience and skills.",d_b:"Digital experience for the Brasil Mostra Japão cultural event.",d_f:"Eight-week photography course I created and taught for learners aged 60 and over.",deg:"Audiovisual & Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023",t3:"Audiovisual & Filmmaking undergraduate studies (not completed), Universidade Uninabuco Digital.",certs:"Additional training in audiovisual production, investigative journalism, fact-checking and AI.",n_about:"About",n_work:"Work",n_stack:"Stack",n_path:"Path",n_contact:"Contact",role:"UX/UI Designer · Front-End · Creative Technology",sub:"Interfaces and AI skills that move with purpose",c1:"See the work",c2:"Get in touch",hint:"Move your cursor over the grid",
-a1:"I'm a UX/UI Designer and Front-End Developer focused on modern, responsive and visually rich web interfaces, and on AI skills that bring professional method into creative and journalistic work.",a2:"My background spans design, motion graphics, 3D, typography, animation, storytelling, digital content and journalism. I also worked with WordPress, Drupal and legacy PHP/MySQL systems.",
+en:{d_dx:"AI skill for UX/UI critique, accessibility, design systems and handoff.",d_dani:"AI cinematic production system for story, shots, continuity and quality assurance; successor to CineOS.",d_code:"Code-driven motion graphics with Canvas-to-MP4 rendering and synchronized sound.",d_link:"Skill for LinkedIn profile diagnosis, headlines, experience and skills.",d_b:"Digital experience for the Brasil Mostra Japão cultural event.",d_f:"Eight-week photography course I created and taught for learners aged 60 and over.",deg:"Audiovisual & Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023",t3:"Audiovisual & Filmmaking undergraduate studies (not completed), Universidade Uninabuco Digital.",certs:"Additional training in audiovisual production, investigative journalism, fact-checking and AI.",n_about:"About",n_work:"Work",n_stack:"Stack",n_path:"Path",n_contact:"Contact",role:"UX/UI Designer · Front-End Developer · Creative Technologist",sub:"Digital interfaces designed with intention, built with code, and extended through creative AI.",c1:"See the work",c2:"Get in touch",hint:"Move your cursor over the grid",
+a1:"I design responsive web experiences and digital interfaces, connecting UX/UI, visual systems and front-end implementation with React, TypeScript, JavaScript, HTML and CSS.",a2:"At Draft Creative Studio (2016–present), I work across web design, digital interfaces and multidisciplinary creative production. Audiovisual storytelling, motion and AI workflows with Claude and Higgsfield complement my design and development practice.",
 s_repos:"Skills & Engines",s_sites:"Sites & Platforms",k_ai:"AI · Skill / Engine",k_edu:"Education",k_web:"Website · Platform",go:"Open",
 d_c:"Engine-agnostic AI film production system: 62 skills, 69 Visual DNA styles with color grading, a shot-spec compiler for Veo, Kling and Seedance, continuity graph and cinema audit.",
 d_m:"Knowledge engine to format, validate, lint and convert screenplays in the Master Scene standard, ready to run as an AI agent skill.",
@@ -301,11 +313,11 @@ d_e:"Website of the Entre Elas project: free professional training for women in 
 d_b:"Digital experience for Brasil Mostra Japão, a Japanese cultural event.",
 d_f:"Eight-week photography course I created and taught for learners aged 60 and over.",
 w1:"Responsive design · Visual hierarchy",w2:"Interface composition",w3:"Web animation · Digital experiences",d1:"Prototyping · UX research",d2:"Design systems",ct:"AI-assisted creative workflows",
-t1:"Computer assembly and configuration, then web design and CMS development (Drupal, WordPress, PHP and MySQL on GNU/Linux servers).",t2:"Audiovisual production (photography, videography, editing, motion design) and AI workflows with open-source and proprietary tools.",t3:"Audiovisual & Filmmaking undergraduate studies (not completed), Universidade Uninabuco Digital.",
-s_lang:"Languages",l_pt:"Portuguese · Native",l_es:"Spanish · C1",l_en:"English · B1",s_certs:"Certifications",deg:"Audiovisual & Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023",certs:"Additional training in audiovisual production, investigative journalism, fact-checking and AI.",certs_l:"View certificates",
-ct_h:"Let's talk",ct_p:"Get in touch so we can discuss potential opportunities.",follow:"Follow on GitHub",star:"★ Star this portfolio",linkedin_cta:"Connect on LinkedIn ↗",linkedin_float:"Let\u0027s connect"},
-es:{d_dx:"Skill de IA para crítica UX/UI, accesibilidad, sistemas de diseño y handoff.",d_dani:"Sistema cinematográfico con IA, planos, continuidad y control de calidad; sucesor de CineOS.",d_code:"Motion graphics por código, render Canvas a MP4 y audio sincronizado.",d_link:"Skill para revisar perfiles de LinkedIn, titulares, experiencia y competencias.",d_b:"Experiencia digital para el evento cultural Brasil Mostra Japão.",d_f:"Curso de fotografía de ocho semanas que creé e impartí para mayores de 60 años.",deg:"Audiovisual y Cine — Estudios universitarios no finalizados · Universidade Uninabuco Digital · 2021–2023",t3:"Estudios universitarios de Audiovisual y Cine (no finalizados), Universidade Uninabuco Digital.",certs:"Formación complementaria en audiovisual, periodismo de investigación, verificación e IA.",n_about:"Sobre mí",n_work:"Trabajos",n_stack:"Stack",n_path:"Trayectoria",n_contact:"Contacto",role:"Diseñador UX/UI · Front-End · Tecnología Creativa",sub:"Interfaces y skills de IA que se mueven con propósito",c1:"Ver trabajos",c2:"Contactar",hint:"Mueve el cursor sobre la cuadrícula",
-a1:"Soy Diseñador UX/UI y Desarrollador Front-End, enfocado en interfaces web modernas, responsivas y visualmente ricas, y en skills de IA que llevan método profesional al trabajo creativo y periodístico.",a2:"Mi formación abarca diseño, motion graphics, 3D, tipografía, animación, storytelling, contenido digital y periodismo. También trabajé con WordPress, Drupal y sistemas legados en PHP/MySQL.",
+t1:"Computer assembly and configuration, then web design and CMS development (Drupal, WordPress, PHP and MySQL on GNU/Linux servers).",t2:"Draft Creative Studio — UX/UI design, responsive websites, front-end development and multidisciplinary production across motion, audiovisual and AI.",t3:"Audiovisual & Filmmaking undergraduate studies (not completed), Universidade Uninabuco Digital.",
+s_lang:"Languages",l_pt:"Portuguese · Native",l_es:"Spanish · C1",l_en:"English · B1",s_certs:"Credentials & Education",deg:"Audiovisual & Filmmaking — Undergraduate Studies (not completed) · Universidade Uninabuco Digital · 2021–2023",certs:"Additional training in audiovisual production, investigative journalism, fact-checking and AI.",certs_l:"View certificates",
+ct_h:"Let's talk",ct_p:"Get in touch so we can discuss potential opportunities.",follow:"Follow on GitHub",star:"★ Star this portfolio",linkedin_cta:"Connect on LinkedIn ↗",registered:"Registered Journalist",ai_cert:"AI certification · in progress",linkedin_float:"Let\u0027s connect"},
+es:{d_dx:"Skill de IA para crítica UX/UI, accesibilidad, sistemas de diseño y handoff.",d_dani:"Sistema cinematográfico con IA, planos, continuidad y control de calidad; sucesor de CineOS.",d_code:"Motion graphics por código, render Canvas a MP4 y audio sincronizado.",d_link:"Skill para revisar perfiles de LinkedIn, titulares, experiencia y competencias.",d_b:"Experiencia digital para el evento cultural Brasil Mostra Japão.",d_f:"Curso de fotografía de ocho semanas que creé e impartí para mayores de 60 años.",deg:"Audiovisual y Cine — Estudios universitarios no finalizados · Universidade Uninabuco Digital · 2021–2023",t3:"Estudios universitarios de Audiovisual y Cine (no finalizados), Universidade Uninabuco Digital.",certs:"Formación complementaria en audiovisual, periodismo de investigación, verificación e IA.",n_about:"Sobre mí",n_work:"Trabajos",n_stack:"Stack",n_path:"Trayectoria",n_contact:"Contacto",role:"Diseñador UX/UI · Desarrollador Front-End · Tecnólogo Creativo",sub:"Interfaces digitales diseñadas con intención, construidas con código y ampliadas con IA creativa.",c1:"Ver trabajos",c2:"Contactar",hint:"Mueve el cursor sobre la cuadrícula",
+a1:"Diseño experiencias web responsivas e interfaces digitales, conectando UX/UI, sistemas visuales e implementación front-end con React, TypeScript, JavaScript, HTML y CSS.",a2:"En Draft Creative Studio (2016–actualidad), trabajo con diseño web, interfaces digitales y producción creativa multidisciplinar. Audiovisual, motion e IA con Claude y Higgsfield complementan mi trabajo.",
 s_repos:"Skills y motores",s_sites:"Sitios y plataformas",k_ai:"IA · Skill / Motor",k_edu:"Educación",k_web:"Sitio web · Plataforma",go:"Abrir",
 d_c:"Sistema de producción cinematográfica con IA, agnóstico de motor: 62 skills, 69 estilos Visual DNA con color grading, compilador de shot-spec para Veo, Kling y Seedance, grafo de continuidad y auditoría de cine.",
 d_m:"Motor de conocimiento para formatear, validar, revisar y convertir guiones en el estándar Master Scene, listo para usarse como skill de un agente de IA.",
@@ -316,11 +328,11 @@ d_e:"Sitio del proyecto Entre Elas: capacitación profesional gratuita para muje
 d_b:"Experiencia digital para el evento cultural Brasil Mostra Japão.",
 d_f:"Curso de fotografía de ocho semanas que creé e impartí para mayores de 60 años.",
 w1:"Diseño responsivo · Jerarquía visual",w2:"Composición de interfaces",w3:"Animación web · Experiencias digitales",d1:"Prototipado · Investigación UX",d2:"Sistemas de diseño",ct:"Flujos creativos asistidos por IA",
-t1:"Montaje y configuración de computadoras; luego diseño web y desarrollo CMS (Drupal, WordPress, PHP y MySQL en servidores GNU/Linux).",t2:"Producción audiovisual (fotografía, video, edición, motion design) y flujos de IA con herramientas open source y propietarias.",t3:"Estudios universitarios en Audiovisual y Cine (no finalizados), Universidade Uninabuco Digital.",
-s_lang:"Idiomas",l_pt:"Portugués · Nativo",l_es:"Español · C1",l_en:"Inglés · B1",s_certs:"Certificaciones",deg:"Audiovisual y Cine — Estudios universitarios no finalizados · Universidade Uninabuco Digital · 2021–2023",certs:"Formación complementaria en audiovisual, periodismo de investigación, verificación e IA.",certs_l:"Ver certificados",
-ct_h:"Hablemos",ct_p:"Contáctame para conversar sobre posibles oportunidades.",follow:"Seguir en GitHub",star:"★ Dar estrella al portafolio",linkedin_cta:"Conectar en LinkedIn ↗",linkedin_float:"Conectemos"},
-pt:{d_dx:"Skill de IA para crítica UX/UI, acessibilidade, sistemas de design e handoff.",d_dani:"Sistema de produção cinematográfica com IA, planos, continuidade e QA; sucessor do CineOS.",d_code:"Motion graphics por código, render Canvas para MP4 e áudio sincronizado.",d_link:"Skill para análise de perfis LinkedIn, títulos, experiências e competências.",d_b:"Experiência digital para o evento cultural Brasil Mostra Japão.",d_f:"Curso de fotografia de oito semanas que criei e ministrei para alunos com 60 anos ou mais.",deg:"Audiovisual e Cinema — Estudos de graduação não concluídos · Universidade Uninabuco Digital · 2021–2023",t3:"Estudos de graduação em Audiovisual e Cinema (não concluídos), Universidade Uninabuco Digital.",certs:"Formação complementar em audiovisual, jornalismo investigativo, checagem e IA.",n_about:"Sobre",n_work:"Trabalhos",n_stack:"Stack",n_path:"Trajetória",n_contact:"Contato",role:"UX/UI Designer · Front-End · Tecnologia Criativa",sub:"Interfaces e skills de IA que se movem com propósito",c1:"Ver trabalhos",c2:"Entrar em contato",hint:"Mova o cursor sobre a grade",
-a1:"Sou UX/UI Designer e Desenvolvedor Front-End, focado em interfaces web modernas, responsivas e visualmente ricas, e em skills de IA que levam método profissional para o trabalho criativo e jornalístico.",a2:"Minha formação passa por design, motion graphics, 3D, tipografia, animação, storytelling, conteúdo digital e jornalismo. Também trabalhei com WordPress, Drupal e sistemas legados em PHP/MySQL.",
+t1:"Montaje y configuración de computadoras; luego diseño web y desarrollo CMS (Drupal, WordPress, PHP y MySQL en servidores GNU/Linux).",t2:"Draft Creative Studio — diseño UX/UI, sitios responsivos, desarrollo front-end y producción multidisciplinar con motion, audiovisual e IA.",t3:"Estudios universitarios en Audiovisual y Cine (no finalizados), Universidade Uninabuco Digital.",
+s_lang:"Idiomas",l_pt:"Portugués · Nativo",l_es:"Español · C1",l_en:"Inglés · B1",s_certs:"Credenciales y formación",deg:"Audiovisual y Cine — Estudios universitarios no finalizados · Universidade Uninabuco Digital · 2021–2023",certs:"Formación complementaria en audiovisual, periodismo de investigación, verificación e IA.",certs_l:"Ver certificados",
+ct_h:"Hablemos",ct_p:"Contáctame para conversar sobre posibles oportunidades.",follow:"Seguir en GitHub",star:"★ Dar estrella al portafolio",linkedin_cta:"Conectar en LinkedIn ↗",registered:"Periodista registrado",ai_cert:"Certificación de IA · en curso",linkedin_float:"Conectemos"},
+pt:{d_dx:"Skill de IA para crítica UX/UI, acessibilidade, sistemas de design e handoff.",d_dani:"Sistema de produção cinematográfica com IA, planos, continuidade e QA; sucessor do CineOS.",d_code:"Motion graphics por código, render Canvas para MP4 e áudio sincronizado.",d_link:"Skill para análise de perfis LinkedIn, títulos, experiências e competências.",d_b:"Experiência digital para o evento cultural Brasil Mostra Japão.",d_f:"Curso de fotografia de oito semanas que criei e ministrei para alunos com 60 anos ou mais.",deg:"Audiovisual e Cinema — Estudos de graduação não concluídos · Universidade Uninabuco Digital · 2021–2023",t3:"Estudos de graduação em Audiovisual e Cinema (não concluídos), Universidade Uninabuco Digital.",certs:"Formação complementar em audiovisual, jornalismo investigativo, checagem e IA.",n_about:"Sobre",n_work:"Trabalhos",n_stack:"Stack",n_path:"Trajetória",n_contact:"Contato",role:"UX/UI Designer · Desenvolvedor Front-End · Tecnólogo Criativo",sub:"Interfaces digitais desenhadas com intenção, construídas com código e ampliadas com IA criativa.",c1:"Ver trabalhos",c2:"Entrar em contato",hint:"Mova o cursor sobre a grade",
+a1:"Desenvolvo experiências web responsivas e interfaces digitais, conectando UX/UI, sistemas visuais e implementação front-end com React, TypeScript, JavaScript, HTML e CSS.",a2:"Na Draft Creative Studio (2016–presente), atuo em web design, interfaces digitais e produção criativa multidisciplinar. Audiovisual, motion e IA com Claude e Higgsfield complementam meu trabalho.",
 s_repos:"Skills e motores",s_sites:"Sites e plataformas",k_ai:"IA · Skill / Motor",k_edu:"Educação",k_web:"Site · Plataforma",go:"Abrir",
 d_c:"Sistema de produção cinematográfica com IA, agnóstico de motor: 62 skills, 69 estilos Visual DNA com color grading, compilador de shot-spec para Veo, Kling e Seedance, grafo de continuidade e auditoria de cinema.",
 d_m:"Motor de conhecimento para formatar, validar, fazer lint e converter roteiros no padrão Master Scene, pronto para uso como skill de um agente de IA.",
@@ -331,9 +343,9 @@ d_e:"Site do Projeto Entre Elas: qualificação profissional gratuita para mulhe
 d_b:"Experiência digital para o evento cultural Brasil Mostra Japão.",
 d_f:"Curso de fotografia de oito semanas que criei e ministrei para pessoas com 60 anos ou mais.",
 w1:"Design responsivo · Hierarquia visual",w2:"Composição de interfaces",w3:"Animação web · Experiências digitais",d1:"Prototipagem · Pesquisa UX",d2:"Design systems",ct:"Fluxos criativos assistidos por IA",
-t1:"Montagem e configuração de computadores; depois web design e desenvolvimento CMS (Drupal, WordPress, PHP e MySQL em servidores GNU/Linux).",t2:"Produção audiovisual (fotografia, vídeo, edição, motion design) e fluxos de IA com ferramentas open source e proprietárias.",t3:"Estudos de graduação em Audiovisual e Cinema (não concluídos), Universidade Uninabuco Digital.",
-s_lang:"Idiomas",l_pt:"Português · Nativo",l_es:"Espanhol · C1",l_en:"Inglês · B1",s_certs:"Certificações",deg:"Audiovisual e Cinema — Estudos de graduação não concluídos · Universidade Uninabuco Digital · 2021–2023",certs:"Formação complementar em audiovisual, jornalismo investigativo, checagem e IA.",certs_l:"Ver certificados",
-ct_h:"Vamos conversar",ct_p:"Entre em contato para conversarmos sobre oportunidades.",follow:"Seguir no GitHub",star:"★ Dar estrela no portfólio",linkedin_cta:"Conectar no LinkedIn ↗",linkedin_float:"Vamos conectar"}};
+t1:"Montagem e configuração de computadores; depois web design e desenvolvimento CMS (Drupal, WordPress, PHP e MySQL em servidores GNU/Linux).",t2:"Draft Creative Studio — UX/UI, sites responsivos, front-end e produção multidisciplinar com motion, audiovisual e IA.",t3:"Estudos de graduação em Audiovisual e Cinema (não concluídos), Universidade Uninabuco Digital.",
+s_lang:"Idiomas",l_pt:"Português · Nativo",l_es:"Espanhol · C1",l_en:"Inglês · B1",s_certs:"Credenciais e formação",deg:"Audiovisual e Cinema — Estudos de graduação não concluídos · Universidade Uninabuco Digital · 2021–2023",certs:"Formação complementar em audiovisual, jornalismo investigativo, checagem e IA.",certs_l:"Ver certificados",
+ct_h:"Vamos conversar",ct_p:"Entre em contato para conversarmos sobre oportunidades.",follow:"Seguir no GitHub",star:"★ Dar estrela no portfólio",linkedin_cta:"Conectar no LinkedIn ↗",registered:"Jornalista registrado",ai_cert:"Certificação em IA · em andamento",linkedin_float:"Vamos conectar"}};
 
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 function setLang(language) {
@@ -360,7 +372,7 @@ setLang(preferred || 'en');
 const themeButton = document.querySelector('#th');
 if(themeButton) themeButton.addEventListener('click', () => {
   const root = document.documentElement;
-  const dark = getComputedStyle(root).getPropertyValue('--bg').trim()==='#07082b';
+  const dark = getComputedStyle(root).getPropertyValue('--bg').trim()==='#070d23';
   root.dataset.t = dark ? 'light' : 'dark';
   themeButton.setAttribute('aria-label',dark ? 'Switch to dark theme' : 'Switch to light theme');
 });
