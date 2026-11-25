@@ -4,11 +4,15 @@ description: Existing editorial, kinetic, multilingual portfolio visual system
 colors:
   light-bg: "#eef0ff"
   light-text: "#0a0b2e"
-  light-blue: "#1d21ff"
+  light-blue: "#1167e8"
+  cv-navy: "#081629"
+  violet: "#7551dc"
+  yellow: "#ffd166"
+  cyan: "#59deea"
   light-muted: "#4a4d7a"
   dark-bg: "#07082b"
   dark-text: "#eceeff"
-  dark-blue: "#6f74ff"
+  dark-blue: "#74b4ff"
   dark-muted: "#a3a7dd"
 typography:
   display:
@@ -27,13 +31,13 @@ rounded:
 Expressive, typographic UX/UI portfolio. This document describes the incumbent code, not an independently approved redesign.
 
 ## Colors
-Color scheme adapts to light and dark using CSS variables in index.html. Electric blue is the central brand accent.
+Color scheme adapts to light and dark using CSS variables in index.html. Electric blue is the principal CV-aligned accent. Existing purple is retained for creative identity, and warm yellow provides selective emphasis, never body copy.
 
 ## Typography
 Big Shoulders Display anchors display headlines, controls and card headings; Newsreader carries body copy and editorial text.
 
 ## Layout
-Full-viewport WebGL hero, maximum 1300px sections, responsive card grid and two-column About/education; breakpoints include 760px and 700px.
+Full-viewport CSS-driven animated hero, maximum 1300px sections, responsive card grid and two-column About/education; breakpoints include 760px and 700px.
 
 ## Elevation & Depth
 Grid shader and card tilt/spotlight create movement; reserve motion for nonessential visual feedback.
